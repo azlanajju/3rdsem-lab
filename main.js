@@ -17,7 +17,6 @@ function myFunction8() {
   var copyText = document.getElementById("myInput");
   copyText.select(); 
   navigator.clipboard.writeText(copyText.value);
-
   
 }
 
