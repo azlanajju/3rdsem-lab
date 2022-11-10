@@ -178,7 +178,7 @@ textarea{
   
 }
 @media only screen and (min-width: 980px) {
-
+/*
  
 .sems a {
   border: none;
@@ -189,7 +189,7 @@ textarea{
   color:grey;
 
   margin: 10px;
-}
+} */
 
 .sub a{
   text-decoration: none;
