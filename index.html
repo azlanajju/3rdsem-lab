@@ -502,7 +502,67 @@ onclick="myFunction4()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</
             <div class="container">
               <textarea  name="" id="myInput4" cols="90" rows="10">
 
-                  <!-- programs here -->
+                  #include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+int stack[50];
+int top = -1;
+void push(int);
+int pop();
+void push(int num)
+{
+stack[++top] = num;
+}
+int pop()
+{
+return stack[top--];
+}
+int main()
+{
+char suffix[50],ch;
+int p1,p2,p3,i;
+printf("Enter the valid suffix expression : ");
+gets(suffix);
+for(i=0;suffix[i]!='\0';i++)
+{
+ch = suffix[i];
+//puts(ch);
+if(isdigit(ch))
+push(ch-'0');
+else
+{
+p2 = pop();
+p1 = pop();
+switch(ch)
+{
+case '+': push(p1+p2);
+//printf("%d",pop());
+break;
+case '-': push(p1-p2);
+break;
+break;
+case '/': if(p2 == 0)
+{
+printf("Divide by Zero error\n");
+exit(0);
+}
+push(p1/p2);
+break;
+case '%': if(p2 == 0)
+{
+printf("Divide by Zero error\n");
+exit(0);
+}
+push(p1%p2);
+break;
+case '^': push(pow(p1,p2));
+break;
+default : printf("Invalid Expression\n");
+}
+}
+}
+printf("The value of given suffix expression is : %d\n",pop());
+}
 
                   </textarea>
 
@@ -512,11 +572,11 @@ onclick="myFunction4()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</
               
 <button class="texts-btn"  id="copied4"
 onclick="myFunction5()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</button>
-                <h3>PROGRAM 5</h3>
+                <h3>PROGRAM 5 a</h3>
                 <p></p>
             </div>
         </div>
-          <!--   program 6     
+          <!--   program 5b      
         <div class="card card3">
             <div class="container">
                 <textarea name="" id="myInput" cols="90" rows="10">
