@@ -60,7 +60,45 @@
     <div class="card card1">
       <div class="container">
         <textarea name="" id="myInput" >
- <!-- program 1 -->
+          import java. util. Scanner;
+          class Quadratic
+          {
+          public static void main (String args [])
+          {
+          double a, b, c, disc, root1, root2;
+          Scanner in = new Scanner (System.in);
+          System.out.println("Enter the value of 3 Coefficients a, b and c of a Quadratic Equation");
+          System.out.println("Enter the value of a");
+          a = in. nextFloat ();
+          if(a==0)
+          {
+          System.out.println("It is not a Quadratic Equation");
+           System.exit(0);
+          }
+          System.out.println("Enter the value of b");
+          b = in. nextFloat ();
+          System.out.println("Enter the value of c");
+          c = in. nextFloat ();
+          disc = b * b - 4 * a * c;
+          if (disc == 0)
+          System.out.println("Equal Roots are " + (- b / (2*a)));
+          else if(disc > 0)
+          {
+          System.out.println(" Real and Distinct roots are ");
+          root1 = ((-b + Math.sqrt(disc)) / (2 * a));
+          root2 = ((-b - Math.sqrt(disc)) / (2 * a));
+          System.out.println(" Root 1: " + root1);
+          System.out.println(" Root 2: " + root2);
+          }
+          else {
+          System.out.println(" Complex roots are ");
+          root1 = (-b ) / (2 * a) ;
+          root2 = (Math.sqrt(disc * -1 )) / (2 * a) ;
+          System.out.println(" Root 1 : " + root1 + " + i " + root2 );
+          System.out.println(" Root 2 : " + root1 + " - i " + root2 );
+          }
+          }
+          }
   
                   </textarea>
       </div>
@@ -74,7 +112,53 @@
     <div class="card card2">
       <div class="container">
         <textarea name="" id="myInput1" cols="90" rows="10">
- <!-- program 2 -->
+          import java. util. Scanner;
+          class student {
+          String usn;
+          String name;
+          String branch;
+          long phone;
+          public void getdata (){
+          Scanner in = new Scanner (System.in);
+          System.out.println("USN: ");
+          usn = in. nextLine ();
+          System.out.println(" Name: ");
+          name = in. nextLine ();
+          System.out.println(" Branch: ");
+          branch = in. nextLine ();
+          System.out.println("Phone:");
+          phone = in. nextLong ();
+          }
+          public void display (){
+          System.out.println("*********************************");
+          System.out.println("USN: " + usn);
+          System.out.println(" Name: " + name);
+          System.out.println(" Branch: " + branch);
+          System.out.println("Phone:" + phone);
+          System.out.println("*********************************");
+          }
+          }
+          class Main
+          {
+          public static void main(String args[]){
+          student[] obj = new student[3];
+          int count,i;
+          Scanner in = new Scanner(System.in);
+          System.out.println("Enter the count of Students : ");
+          count = in.nextInt();
+          for(i=0;i<count;i++)
+          obj[i] = new student();
+          for(i=0;i<count;i++){
+          System.out.println(" Enter the Student " + (i + 1 ) + " Details");
+          obj[i].getdata();
+          }
+          System.out.println("Student Information Entered Are : ");
+          for(i=0;i<count;i++){
+          System.out.println("Student " + (i + 1 ) + " Details");
+          obj[i].display();
+          }
+          }
+          }
 
                   </textarea>
 
@@ -89,7 +173,73 @@
     <div class="card card3">
       <div class="container">
         <textarea name="" id="myInput2" cols="90" rows="10">
-  <!-- program 3 -->
+          import java.util.Scanner;
+          class Prime
+          {
+          public static void main(String args[])
+          {
+          int number, flag = 0,i;
+          Scanner in = new Scanner (System.in);
+          System.out.println("Enter a number to Check for Prime");
+          number = in.nextInt();
+          System.out.println(number);
+          for(i=2;i<=(number/2);i++)
+          {
+          if(number%i == 0)
+          {
+          flag = 1;
+          break;
+          }
+          }
+          if(flag == 1)
+          System.out.println("Entered Number " + number + " is not Prime ");
+          else
+          System.out.println(" Entered Number "+ number + " is Prime ");
+          }
+
+          <!-- arithmatic calculator -->
+
+          import java.util.Scanner;
+class Calculator
+{
+public static void main(String args[])
+{
+int num1, num2,opt;
+Scanner in = new Scanner(System.in);
+while(true){
+System.out.println("Enter the First Number");
+num1 = in.nextInt();
+System.out.println("Enter the Second Number");
+num2 = in.nextInt();
+System.out.println("*********Calculator Using Switch**********");
+System.out.println("1. Addition");
+System.out.println("2. Subtraction");
+System.out.println("3. Multiplication");
+System.out.println("4. Division");
+System.out.println("5. Exit");
+System.out.println("Enter Ur Choice(1-5)");
+opt = in.nextInt();
+switch(opt){
+case 1: System.out.println(" Sum of " + num1 + " and " + num2 +" is : " + (num1+num2));
+break;
+case 2: System.out.println(" Difference of " + num1 + " and " + num2 +" is : " + (num1-
+num2));
+break;
+case 3: System.out.println(" Product of " + num1 + " and " + num2 +" is : " + (num1*num2));
+break;
+case 4: if(num2==0)
+{
+System.out.println("Divide by Zero Error");
+break;
+}
+System.out.println(" Division of " + num1 + " and " + num2 +" is : " + (num1/num2));
+break;
+default: System.out.println("Invalid Input");
+System.exit(0);
+}
+}
+}
+}
                                   </textarea>
       </div>
       <div class="details">
@@ -105,7 +255,123 @@
             <div class="container">
                 <textarea  name="" id="myInput3" cols="90" rows="10">
 
-                  <!-- programs here -->
+                  import java. util.Scanner;
+                  class Staff {
+                  int staffId;
+                  String name;
+                  long phone;
+                  long salary;
+                  public void getdata()
+                  {
+                  Scanner obj = new Scanner(System.in);
+                  System.out.println(" Enter the Staff ID : ");
+                  staffId = obj.nextInt();
+                  System.out.println(" Enter the Staff Name : ");
+                  name = obj.next();
+                  System.out.println(" Enter the Contact No : ");
+                  phone = obj.nextLong();
+                  System.out.println(" Enter the Salary : ");
+                  salary = obj.nextLong();
+                  }
+                  public void display()
+                  {
+                  System.out.println(" Staff ID : " + staffId );
+                  System.out.println(" Staff Name : " + name );
+                  System.out.println(" Contact No : " + phone);
+                  System.out.println(" Salary : " + salary);
+                  }
+                  }
+                  class teaching extends Staff {
+                  String domain;
+                  String publications;
+                  public void getdata()
+                  {
+                  super.getdata();
+                  Scanner obj = new Scanner(System.in);
+                  System.out.println(" Enter the Domain : ");
+                  domain = obj.next();
+                  System.out.println(" Enter the Publications :");
+                  publications = obj.next();
+                  }
+                  public void display()
+                  {
+                  super.display();
+                  System.out.println(" Domain : " + domain);
+                  System.out.println(" Publications :" + publications);
+                  }
+                  }
+                  class technical extends Staff {
+                  String skills;
+                  public void getdata()
+                  {
+                  super.getdata();
+                  Scanner obj = new Scanner(System.in);
+                  System.out.println(" Enter the Skills : ");
+                  skills = obj.next();
+                  }
+                  public void display()
+                  {
+                  super.display();
+                  System.out.println(" Skills : " + skills);
+                  }
+                  }
+                  class contract extends Staff {
+                  long period;
+                  public void getdata()
+                  {
+                  super.getdata();
+                  Scanner obj = new Scanner(System.in);
+                  System.out.println(" Enter the Contract Period (in Years) : ");
+                  period = obj.nextLong();
+                  }
+                  public void display()
+                  {
+                  super.display();
+                  System.out.println(" Period : " + period);
+                  }
+                  }
+                  public class Main
+                  {
+                  public static void main(String args[]){
+                  teaching[] teachobj = new teaching[3];
+                  technical[] techobj = new technical[3];
+                  contract[] conobj = new contract[3];
+                  int count,i;
+                  Scanner in = new Scanner(System.in);
+                  System.out.println("Enter the count of staffs : ");
+                  count = in.nextInt();
+                  for(i=0;i<count;i++){
+                  teachobj[i] = new teaching();
+                  techobj[i] = new technical();
+                  conobj[i]= new contract();
+                  }
+                  for(i=0;i<count;i++){
+                  System.out.println(" Enter the Teaching Staff details " + (i + 1 ) + " Details");
+                  teachobj[i].getdata();
+                  }
+                  for(i=0;i<count;i++){
+                  System.out.println(" Enter the Technical Staff details " + (i + 1 ) + " Details");
+                  techobj[i].getdata();
+                  }
+                  for(i=0;i<count;i++){
+                  System.out.println(" Enter the Contract Staff details " + (i + 1 ) + " Details");
+                  conobj[i].getdata();
+                  }
+                  System.out.println("Staff Information Entered Are : ");
+                  for(i=0;i<count;i++){
+                  System.out.println("Teaching : " + (i + 1 ) + " Details");
+                  teachobj[i].display();
+                  }
+                  for(i=0;i<count;i++){
+                  System.out.println("Technical : " + (i + 1 ) + " Details");
+                  techobj[i].display();
+                  }
+                  for(i=0;i<count;i++){
+                  System.out.println("Contract : " + (i + 1 ) + " Details");
+                  conobj[i].display();
+                  }
+                  }
+                  }
 
                   </textarea>
             </div>
@@ -123,7 +389,76 @@ onclick="myFunction4()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</
         <div class="card card2">
             <div class="container">
               <textarea  name="" id="myInput4" cols="90" rows="10">
-                  programs
+                class number
+                {
+                int p,q;
+                //Constructor Overloading
+                public number (){
+                System.out.println("Default Constructor Invoked and initialized to Zero");
+                System.out.println("P = " + p +"and Q = " +q);
+                }
+                public number (int x, int y)
+                {
+                System.out.println("Parameterized Constructor Invoked");
+                p=x;
+                q=y;
+                System.out.println("P = " + p +"and Q = " +q);
+                }
+                // Method Overloading
+                public int add(int i, int j)
+                {
+                System.out.println("Calling add method with two integer values");
+                return (i+j);
+                }
+                public int add(int i, int j, int k)
+                {
+                System.out.println("Calling add method with three integer values");
+                return (i+j+k);
+                }
+                public float add(float f1, float f2)
+                {
+                System.out.println("Calling add method with two floating values");
+                return (f1+f2);
+                }
+                // Method Overriding
+                public void display()
+                {
+                System.out.println("Inside Parent display method");
+                }
+                }
+                // Child Class
+                class override extends number
+                {
+                public void display()
+                {
+                System.out.println("Inside Child display method");
+                }
+                }
+                class Main
+                {
+                public static void main(String args[])
+                {
+                int x=2, y=3, z=4;
+                number c=new number(); // Parent Object with default constructor called
+                number c1=new number(x, z ); // Parent Object with parametrized constructor called
+                float m=7.2F, n=5.2F;
+                int k=c.add(x,y);
+                System.out.println("k = "+k);
+                int t=c.add(x,y,z);
+                System.out.println("t = "+t);
+                float ft=c.add(m, n);
+                System.out.println("ft = "+ft);
+                // Method Override
+                override ob = new override(); // Child Object Created
+                number ref;
+                // reference object
+                ref = c;
+                // reference object pointing to parent
+                ref.display();
+                ref = ob; // reference object pointing to child
+                ref.display();
+                }
+                }
                   </textarea>
                
             </div>
@@ -190,7 +525,7 @@ onclick="myFunction1()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</
         <a href="https://instagram.com/azlan_ajju?igshid=YmMyMTA2M2Y=">
           <i class="fa fa-instagram"></i>
         </a>
-        <a href="">
+        <a href="https://www.linkedin.com/in/muhammed-azlan-7612b0234/">
           <i class="fa fa-linkedin-square"></i>
         </a>
         </div>
