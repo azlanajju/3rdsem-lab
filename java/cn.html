@@ -24,11 +24,11 @@
 
 
 
-    <a class="active"  href="">sem3</a>
+    <a  href="">sem3</a>
 
     <a   href="https://4thsemlab.netlify.app/">sem4</a>
 
-    <a href="https://labprograms.netlify.app/">sem5</a>
+    <a class="active" href="">sem5</a>
 
     <a href="">sem6</a>
 
@@ -470,22 +470,74 @@ onclick="myFunction5()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</
                 <p></p>
             </div>
         </div>
-          <!--   program 6     
+        <!--program 6-->    
         <div class="card card3">
-            <div class="container">
-                <textarea name="" id="myInput" cols="90" rows="10">
-                                  programs
-                                  </textarea>
-            </div>
-            <div class="details">
-              
-<button class="texts-btn"  id="copied"
-onclick="myFunction1()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</button>
-                <h3>PROGRAM 3</h3>
-                <p></p>
-            </div>
-  </div>      -->
+          <div class="container">
+              <textarea name="" id="myInput5" cols="90" rows="10">
+                                
+program 6
+                                </textarea>
+          </div>
+          <div class="details">
+            
+<button class="texts-btn"  id="copied5"
+onclick="myFunction6()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</button>
+              <h3>PROGRAM 6</h3>
+              <p></p>
+          </div>
+</div>   
 
+          </div>
+      <!--program 7   -->  
+      <div class="card card3">
+          <div class="container">
+              <textarea name="" id="myInput6" cols="90" rows="10">
+                interface Resume{
+                  public void biodata();
+              }
+              
+              class Student implements Resume{
+                  String name;
+                  String projects;
+                  String achievements;
+                  int age;
+              
+                  Student(String name,String projects,String achievements,int age){
+                      this.name = name;
+                      this.projects = projects;
+                      this.achievements = achievements;
+                      this.age = age;
+                  }
+              
+                  public void biodata(){
+                      System.out.println("######## RESUME #########");
+                      System.out.println("Name: "+ name);
+                      System.out.println("Projects: "+ projects);
+                      System.out.println("achievements: "+ achievements);
+                      System.out.println("Age: "+ age);
+                  }
+              }
+              
+              
+              public class Interface {
+                  public static void main(String[] args) {
+                      System.out.println("\n Interface ");
+                      //creating objects
+                      Student s = new Student("Mohammad Ashraf", "Blood Bank websites", "1st place at Embed club competetion", 20);
+                      s.biodata();
+                  }
+              }                           
+
+                                </textarea>
+          </div>
+          <div class="details">
+            
+<button class="texts-btn"  id="copied6"
+onclick="myFunction7()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</button>
+              <h3>PROGRAM 7</h3>
+              <p></p>
+          </div>
+</div>   
   <div class="upload"> 
               <a onclick="upload()"> 
              
