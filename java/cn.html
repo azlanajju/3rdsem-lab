@@ -24,11 +24,11 @@
 
 
 
-    <a  class="active"  href="">sem3</a>
+    <a  href="">sem3</a>
 
     <a   href="https://4thsemlab.netlify.app/">sem4</a>
 
-    <a href="https://labprograms.netlify.app">sem5</a>
+    <a class="active" href="">sem5</a>
 
     <a href="">sem6</a>
 
@@ -60,46 +60,50 @@
     <div class="card card1">
       <div class="container">
         <textarea name="" id="myInput" >
-          import java. util. Scanner;
+          import java.util.Scanner;
           class Quadratic
           {
-          public static void main (String args [])
-          {
-          double a, b, c, disc, root1, root2;
-          Scanner in = new Scanner (System.in);
-          System.out.println("Enter the value of 3 Coefficients a, b and c of a Quadratic Equation");
-          System.out.println("Enter the value of a");
-          a = in. nextFloat ();
-          if(a==0)
-          {
-          System.out.println("It is not a Quadratic Equation");
-           System.exit(0);
+              
+              public static void main(String args[])
+              {
+                 double a,b,c,disc,root1,root2;
+                 Scanner in = new Scanner(System.in);
+                 System.out.println("Enter the value of 3 Coefficients a, b and c of a Quadratic Equation");
+                 System.out.println("Enter the value of a");
+                 a = in.nextFloat();
+                 if(a==0)
+                 {
+                     System.out.println("It is not a Quadratic Equation");
+                     System.exit(0);
+                 }
+                 System.out.println("Enter the value of b");
+                 b = in.nextFloat();
+                 System.out.println("Enter the value of c");
+                 c = in.nextFloat();
+                 disc = b * b - 4 * a * c;
+                 if(disc == 0)
+                      System.out.println("Equal Roots are " + (- b / (2*a)));
+                      else if( disc > 0)
+                      {
+                          System.out.println(" Real and Distinct roots are ");
+                          root1 = ((-b + Math.sqrt(disc)) / (2 * a)) ;
+                          root2 = ((-b - Math.sqrt(disc)) / (2 * a)) ;
+                          System.out.println(" Root 1 : " + root1);
+                          System.out.println(" Root 2 : " + root2);
+                      }
+                  else {
+                          System.out.println(" Complex roots are ");
+                          
+                          root1 = (-b ) / (2 * a) ;
+                          root2 = (Math.sqrt(disc * -1 )) / (2 * a) ;
+                          System.out.println(" Root 1  : " + root1 + "  + i " + root2 );
+                          System.out.println(" Root 2 : " + root1 + " - i " + root2 );
+                          
+                      }
+                 
+                    
+                  }
           }
-          System.out.println("Enter the value of b");
-          b = in. nextFloat ();
-          System.out.println("Enter the value of c");
-          c = in. nextFloat ();
-          disc = b * b - 4 * a * c;
-          if (disc == 0)
-          System.out.println("Equal Roots are " + (- b / (2*a)));
-          else if(disc > 0)
-          {
-          System.out.println(" Real and Distinct roots are ");
-          root1 = ((-b + Math.sqrt(disc)) / (2 * a));
-          root2 = ((-b - Math.sqrt(disc)) / (2 * a));
-          System.out.println(" Root 1: " + root1);
-          System.out.println(" Root 2: " + root2);
-          }
-          else {
-          System.out.println(" Complex roots are ");
-          root1 = (-b ) / (2 * a) ;
-          root2 = (Math.sqrt(disc * -1 )) / (2 * a) ;
-          System.out.println(" Root 1 : " + root1 + " + i " + root2 );
-          System.out.println(" Root 2 : " + root1 + " - i " + root2 );
-          }
-          }
-          }
-  
                   </textarea>
       </div>
       <div class="details">
@@ -112,52 +116,65 @@
     <div class="card card2">
       <div class="container">
         <textarea name="" id="myInput1" cols="90" rows="10">
-          import java. util. Scanner;
-          class student {
-          String usn;
-          String name;
-          String branch;
-          long phone;
-          public void getdata (){
-          Scanner in = new Scanner (System.in);
-          System.out.println("USN: ");
-          usn = in. nextLine ();
-          System.out.println(" Name: ");
-          name = in. nextLine ();
-          System.out.println(" Branch: ");
-          branch = in. nextLine ();
-          System.out.println("Phone:");
-          phone = in. nextLong ();
-          }
-          public void display (){
-          System.out.println("*********************************");
-          System.out.println("USN: " + usn);
-          System.out.println(" Name: " + name);
-          System.out.println(" Branch: " + branch);
-          System.out.println("Phone:" + phone);
-          System.out.println("*********************************");
-          }
+          import java.util.Scanner;
+          class student{
+              String usn;
+              String name;
+              String branch;
+              long phone;
+              public void getdata(){
+                 Scanner in = new Scanner(System.in);
+                      System.out.println("USN : ");
+                     usn = in.nextLine();
+                      System.out.println(" Name : ");
+                      name = in.nextLine();
+                      System.out.println(" Branch: ");
+                      branch = in.nextLine();
+                      System.out.println("Phone :");
+                      phone = in.nextLong();
+                  }
+              
+              public void display(){
+                   
+                  
+                      
+                      System.out.println("*********************************");
+                      System.out.println("USN : " + usn);
+                      
+                      System.out.println(" Name : " + name);
+                       
+                      System.out.println(" Branch: " + branch);
+                       
+                      System.out.println("Phone :" + phone);
+                       System.out.println("*********************************");
+                     
+                  
+              }
           }
           class Main
           {
-          public static void main(String args[]){
-          student[] obj = new student[3];
-          int count,i;
-          Scanner in = new Scanner(System.in);
-          System.out.println("Enter the count of Students : ");
-          count = in.nextInt();
-          for(i=0;i<count;i++)
-          obj[i] = new student();
-          for(i=0;i<count;i++){
-          System.out.println(" Enter the Student " + (i + 1 ) + " Details");
-          obj[i].getdata();
-          }
-          System.out.println("Student Information Entered Are : ");
-          for(i=0;i<count;i++){
-          System.out.println("Student " + (i + 1 ) + " Details");
-          obj[i].display();
-          }
-          }
+              
+              public static void main(String args[]){
+                  student[] obj = new student[3];
+                   int count,i;
+                  Scanner in = new Scanner(System.in);
+                  System.out.println("Enter the count of Students : ");
+                  count = in.nextInt();
+                  for(i=0;i<count;i++){
+                      obj[i] = new student();
+                  }
+                  for(i=0;i<count;i++){
+                  System.out.println(" Enter the  Student " + (i + 1 ) + " Details");
+                  obj[i].getdata();
+                  }
+                     System.out.println("Student Information Entered Are : ");
+                    for(i=0;i<count;i++){ 
+                        System.out.println("Student " + (i + 1 ) + " Details");
+                    obj[i].display();
+                  
+              }
+              }
+              
           }
 
                   </textarea>
@@ -173,73 +190,81 @@
     <div class="card card3">
       <div class="container">
         <textarea name="" id="myInput2" cols="90" rows="10">
+          // calculator program is below arithmetic program
           import java.util.Scanner;
           class Prime
           {
-          public static void main(String args[])
-          {
-          int number, flag = 0,i;
-          Scanner in = new Scanner (System.in);
-          System.out.println("Enter a number to Check for Prime");
-          number = in.nextInt();
-          System.out.println(number);
-          for(i=2;i<=(number/2);i++)
-          {
-          if(number%i == 0)
-          {
-          flag = 1;
-          break;
-          }
-          }
-          if(flag == 1)
-          System.out.println("Entered Number " + number + " is not Prime ");
-          else
-          System.out.println(" Entered Number "+ number + " is Prime ");
-          }
+              
+              public static void main(String args[])
+              {
+                 int number, flag = 0,i;
+                 Scanner in = new Scanner(System.in);
+                 System.out.println("Enter a number to Check for Prime");
+                 number = in.nextInt();
+                 System.out.println(number);
+                 for(i=2;i<=(number/2);i++)
+                 {
+                  if(number%i == 0)
+                  {
+                      flag = 1;
+                      break;
+                  }
+                 }
+                if(flag == 1)
+                System.out.println("Entered Number " + number + " is not Prime ");
+                else
+                System.out.println(" Entered Number "+ number + " is Prime ");
+          
+              }
+              
+                  }
+
 
           <!-- arithmatic calculator -->
 
           import java.util.Scanner;
-class Calculator
-{
-public static void main(String args[])
-{
-int num1, num2,opt;
-Scanner in = new Scanner(System.in);
-while(true){
-System.out.println("Enter the First Number");
-num1 = in.nextInt();
-System.out.println("Enter the Second Number");
-num2 = in.nextInt();
-System.out.println("*********Calculator Using Switch**********");
-System.out.println("1. Addition");
-System.out.println("2. Subtraction");
-System.out.println("3. Multiplication");
-System.out.println("4. Division");
-System.out.println("5. Exit");
-System.out.println("Enter Ur Choice(1-5)");
-opt = in.nextInt();
-switch(opt){
-case 1: System.out.println(" Sum of " + num1 + " and " + num2 +" is : " + (num1+num2));
-break;
-case 2: System.out.println(" Difference of " + num1 + " and " + num2 +" is : " + (num1-
-num2));
-break;
-case 3: System.out.println(" Product of " + num1 + " and " + num2 +" is : " + (num1*num2));
-break;
-case 4: if(num2==0)
-{
-System.out.println("Divide by Zero Error");
-break;
-}
-System.out.println(" Division of " + num1 + " and " + num2 +" is : " + (num1/num2));
-break;
-default: System.out.println("Invalid Input");
-System.exit(0);
-}
-}
-}
-}
+          class Calculator
+          {
+              
+              public static void main(String args[])
+              {
+                 int num1, num2,opt;
+                 Scanner in = new Scanner(System.in);
+                 while(true){
+                
+                 System.out.println("Enter the First Number");
+                 num1 = in.nextInt();
+                 System.out.println("Enter the Second Number");
+                 num2 = in.nextInt();
+                 System.out.println("*********Calculator Using Switch**********");
+                 System.out.println("1. Addition");
+                 System.out.println("2. Subtraction");
+                 System.out.println("3. Multiplication");
+                 System.out.println("4. Division");
+                 System.out.println("5. Exit");
+                 System.out.println("Enter Ur Choice(1-5)");
+                 opt = in.nextInt();
+                 
+                 switch(opt){
+                     case 1: System.out.println(" Sum of " + num1 + " and " + num2 +" is : " + (num1+num2));
+                             break;
+                     case 2: System.out.println(" Difference of " + num1 + " and " + num2 +" is : " + (num1-num2));
+                             break;
+                     case 3: System.out.println(" Product of " + num1 + " and " + num2 +" is : " + (num1*num2));
+                             break;
+                     case 4: if(num2==0)
+                             {
+                                 System.out.println("Divide by Zero Error");
+                                 break;
+                             }
+                             System.out.println(" Division of " + num1 + " and " + num2 +" is : " + (num1/num2));
+                             break;
+                     default: System.out.println("Invalid Input");
+                              System.exit(0);
+                     }
+                        }
+                   }
+                  }
                                   </textarea>
       </div>
       <div class="details">
@@ -255,122 +280,150 @@ System.exit(0);
             <div class="container">
                 <textarea  name="" id="myInput3" cols="90" rows="10">
 
-                  import java. util.Scanner;
+
+                  import java.util.Scanner;
+
                   class Staff {
-                  int staffId;
-                  String name;
-                  long phone;
-                  long salary;
-                  public void getdata()
-                  {
-                  Scanner obj = new Scanner(System.in);
-                  System.out.println(" Enter the Staff ID : ");
-                  staffId = obj.nextInt();
-                  System.out.println(" Enter the Staff Name : ");
-                  name = obj.next();
-                  System.out.println(" Enter the Contact No : ");
-                  phone = obj.nextLong();
-                  System.out.println(" Enter the Salary : ");
-                  salary = obj.nextLong();
-                  }
-                  public void display()
-                  {
-                  System.out.println(" Staff ID : " + staffId );
-                  System.out.println(" Staff Name : " + name );
-                  System.out.println(" Contact No : " + phone);
-                  System.out.println(" Salary : " + salary);
-                  }
-                  }
-                  class teaching extends Staff {
-                  String domain;
-                  String publications;
-                  public void getdata()
-                  {
-                  super.getdata();
-                  Scanner obj = new Scanner(System.in);
-                  System.out.println(" Enter the Domain : ");
-                  domain = obj.next();
-                  System.out.println(" Enter the Publications :");
-                  publications = obj.next();
-                  }
-                  public void display()
-                  {
-                  super.display();
-                  System.out.println(" Domain : " + domain);
-                  System.out.println(" Publications :" + publications);
-                  }
-                  }
-                  class technical extends Staff {
-                  String skills;
-                  public void getdata()
-                  {
-                  super.getdata();
-                  Scanner obj = new Scanner(System.in);
-                  System.out.println(" Enter the Skills : ");
-                  skills = obj.next();
-                  }
-                  public void display()
-                  {
-                  super.display();
-                  System.out.println(" Skills : " + skills);
-                  }
-                  }
-                  class contract extends Staff {
-                  long period;
-                  public void getdata()
-                  {
-                  super.getdata();
-                  Scanner obj = new Scanner(System.in);
-                  System.out.println(" Enter the Contract Period (in Years) : ");
-                  period = obj.nextLong();
-                  }
-                  public void display()
-                  {
-                  super.display();
-                  System.out.println(" Period : " + period);
-                  }
-                  }
+                   int staffId;
+                   String name;
+                   long phone;
+                   long salary;
+                  
+                   public void getdata()
+                        {
+                              Scanner obj = new Scanner(System.in);
+                              System.out.println(" Enter the Staff ID : ");
+                              staffId = obj.nextInt();
+                              System.out.println(" Enter the Staff Name : ");
+                              name = obj.next();
+                              System.out.println(" Enter the Contact No : ");
+                              phone = obj.nextLong();
+                              System.out.println(" Enter the Salary : ");
+                               salary = obj.nextLong();
+                        }
+                  
+                       public void display()
+                          {
+                          
+                              System.out.println(" Staff ID : " + staffId );
+                              System.out.println(" Staff Name : " + name );
+                              System.out.println(" Contact No : " + phone);
+                              System.out.println(" Salary : " + salary);
+                          }
+                   }
+                  
+                   class teaching extends Staff {
+                      String domain;
+                      String publications;
+                  
+                      public void getdata()
+                        {
+                              super.getdata();
+                              Scanner obj = new Scanner(System.in);
+                              System.out.println(" Enter the Domain : ");
+                              domain = obj.next();
+                              System.out.println(" Enter the Publications :");
+                              publications = obj.next();
+                        }
+                       public void display()
+                         {
+                              super.display();
+                              System.out.println(" Domain : " + domain);
+                              System.out.println(" Publications :" + publications);
+                            
+                        }
+                    } 
+                   class technical extends Staff {
+                      String skills;
+                      public void getdata()
+                         {
+                              super.getdata();
+                              Scanner obj = new Scanner(System.in);
+                              System.out.println(" Enter the Skills : ");
+                              skills = obj.next();
+                          }
+                           public void display()
+                            {
+                              super.display();
+                              System.out.println(" Skills : " + skills);
+                          
+                            }
+                     
+                    }
+                  
+                   class contract extends Staff {
+                      long period;
+                  
+                       public void getdata()
+                         {
+                              super.getdata();
+                              Scanner obj = new Scanner(System.in);
+                              System.out.println(" Enter the Contract Period (in Years) : ");
+                              period = obj.nextLong();
+                          }
+                  
+                           public void display()
+                            {
+                              super.display();
+                              System.out.println(" Period : " + period);
+                              
+                          
+                           }
+                     
+                    }
+                  
                   public class Main
-                  {
-                  public static void main(String args[]){
-                  teaching[] teachobj = new teaching[3];
-                  technical[] techobj = new technical[3];
-                  contract[] conobj = new contract[3];
-                  int count,i;
-                  Scanner in = new Scanner(System.in);
-                  System.out.println("Enter the count of staffs : ");
-                  count = in.nextInt();
-                  for(i=0;i<count;i++){
-                  teachobj[i] = new teaching();
-                  techobj[i] = new technical();
-                  conobj[i]= new contract();
-                  }
-                  for(i=0;i<count;i++){
-                  System.out.println(" Enter the Teaching Staff details " + (i + 1 ) + " Details");
-                  teachobj[i].getdata();
-                  }
-                  for(i=0;i<count;i++){
-                  System.out.println(" Enter the Technical Staff details " + (i + 1 ) + " Details");
-                  techobj[i].getdata();
-                  }
-                  for(i=0;i<count;i++){
-                  System.out.println(" Enter the Contract Staff details " + (i + 1 ) + " Details");
-                  conobj[i].getdata();
-                  }
-                  System.out.println("Staff Information Entered Are : ");
-                  for(i=0;i<count;i++){
-                  System.out.println("Teaching : " + (i + 1 ) + " Details");
-                  teachobj[i].display();
-                  }
-                  for(i=0;i<count;i++){
-                  System.out.println("Technical : " + (i + 1 ) + " Details");
-                  techobj[i].display();
-                  }
-                  for(i=0;i<count;i++){
-                  System.out.println("Contract : " + (i + 1 ) + " Details");
-                  conobj[i].display();
-                  }
-                  }
+                    {
+                      
+                      public static void main(String args[]){
+                          teaching[] teachobj = new teaching[3];
+                          technical[] techobj = new technical[3];
+                          contract[] conobj = new contract[3];
+                           int count,i;
+                          Scanner in = new Scanner(System.in);
+                          System.out.println("Enter the count of staffs : ");
+                          count = in.nextInt();
+                          for(i=0;i<count;i++){
+                              teachobj[i] = new teaching();
+                              techobj[i] = new technical();
+                              conobj[i]= new contract();
+                           }
+                  
+                          for(i=0;i<count;i++){
+                          System.out.println(" Enter the  Teaching Staff details " + (i + 1 ) + " Details");
+                          teachobj[i].getdata();
+                          }
+                  
+                           for(i=0;i<count;i++){
+                          System.out.println(" Enter the  Technical Staff details " + (i + 1 ) + " Details");
+                          techobj[i].getdata();
+                          }
+                  
+                           for(i=0;i<count;i++){
+                          System.out.println(" Enter the  Contract Staff details " + (i + 1 ) + " Details");
+                          conobj[i].getdata();
+                          }
+                  
+                             System.out.println("Staff Information Entered Are : ");
+                            for(i=0;i<count;i++){ 
+                                System.out.println("Teaching : " + (i + 1 ) + " Details");
+                            teachobj[i].display();
+                          
+                              }
+                  
+                      for(i=0;i<count;i++){ 
+                                System.out.println("Technical : " + (i + 1 ) + " Details");
+                            techobj[i].display();
+                          
+                         }
+                  
+                      for(i=0;i<count;i++){ 
+                                System.out.println("Contract : " + (i + 1 ) + " Details");
+                            conobj[i].display();
+                          
+                          }
+                      }
+                      
                   }
 
                   </textarea>
@@ -389,73 +442,83 @@ onclick="myFunction4()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</
         <div class="card card2">
             <div class="container">
               <textarea  name="" id="myInput4" cols="90" rows="10">
+
                 class number
                 {
-                int p,q;
-                //Constructor Overloading
-                public number (){
-                System.out.println("Default Constructor Invoked and initialized to Zero");
-                System.out.println("P = " + p +"and Q = " +q);
+                int p,q; 
+                public number(){
+                    System.out.println("Default Constructor Invoked");
                 }
-                public number (int x, int y)
+                
+                public number(int x, int y)
                 {
-                System.out.println("Parameterized Constructor Invoked");
-                p=x;
-                q=y;
-                System.out.println("P = " + p +"and Q = " +q);
+                    System.out.println("Parameterised Constructor Invoked");
+                  p=x; 
+                  q=y;
                 }
-                // Method Overloading
+                
                 public int add(int i, int j)
                 {
-                System.out.println("Calling add method with two integer values");
+                    System.out.println("Calling add method with two integer values");
                 return (i+j);
                 }
                 public int add(int i, int j, int k)
                 {
-                System.out.println("Calling add method with three integer values");
+                    System.out.println("Calling add method with three integer values");
                 return (i+j+k);
                 }
                 public float add(float f1, float f2)
                 {
-                System.out.println("Calling add method with two floating values");
+                    System.out.println("Calling add method with two floating values");
                 return (f1+f2);
+                 
                 }
-                // Method Overriding
-                public void display()
+                public void printData()
                 {
-                System.out.println("Inside Parent display method");
+                    System.out.println("Displaying using printData method");
+                System.out.println("p = "+p); 
+                
+                System.out.println(" q = "+q);
                 }
+                
+                   public void display()
+                {
+                 System.out.println("Inside Parent display method"); 
                 }
-                // Child Class
+                
+                
+                }
                 class override extends number
                 {
-                public void display()
+                  public void display()
                 {
-                System.out.println("Inside Child display method");
+                 System.out.println("Inside Child display method"); 
                 }
                 }
+                
                 class Main
                 {
                 public static void main(String args[])
                 {
-                int x=2, y=3, z=4;
-                number c=new number(); // Parent Object with default constructor called
-                number c1=new number(x, z ); // Parent Object with parametrized constructor called
+                int x=2, y=3, z=4; 
+                number c=new number();
+                c.printData();
+                number c1=new number(x, z );
+                c1.printData();
                 float m=7.2F, n=5.2F;
                 int k=c.add(x,y);
-                System.out.println("k = "+k);
-                int t=c.add(x,y,z);
-                System.out.println("t = "+t);
-                float ft=c.add(m, n);
+                System.out.println("k = "+k); 
+                int t=c.add(x,y,z); 
+                System.out.println("t = "+t); 
+                float ft=c.add(m, n); 
                 System.out.println("ft = "+ft);
-                // Method Override
-                override ob = new override(); // Child Object Created
-                number ref;
-                // reference object
+                
+                // Override
+                override ob = new override();
+                number ref; // reference object
                 ref = c;
-                // reference object pointing to parent
                 ref.display();
-                ref = ob; // reference object pointing to child
+                ref = ob;
                 ref.display();
                 }
                 }
@@ -475,7 +538,113 @@ onclick="myFunction5()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</
           <div class="container">
               <textarea name="" id="myInput5" cols="90" rows="10">
                                 
-program 6
+                import java.util.*;
+                import java.io.*;
+                import currencyconversion.*;
+                import distanceconversion.*;
+                import timeconversion.*;
+                class converter
+                {
+                public static void main(String args[])
+                {
+                Scanner s=new Scanner(System.in);
+                int choice,ch;
+                currency c=new currency();
+                distance d=new distance();
+                timer t=new timer();
+                do
+                {
+                System.out.println("1.dollar to rupee ");
+                System.out.println("2.rupee to dollar ");
+                System.out.println("3.Euro to rupee ");
+                System.out.println("4..rupee to Euro ");
+                System.out.println("5.Yen to rupee ");
+                System.out.println("6.Rupee to Yen ");
+                System.out.println("7.Meter to kilometer ");
+                System.out.println("8.kilometer to meter ");
+                System.out.println("9.Miles  to kilometer ");
+                System.out.println("10.kilometer to miles");
+                System.out.println("11.Hours to Minutes");
+                System.out.println("12.Hours to Seconds");
+                System.out.println("13.Seconds to Hours");
+                System.out.println("14.Minutes to Hours");
+                System.out.println("Enter ur choice");
+                choice=s.nextInt();
+                switch(choice)
+                {
+                case 1:
+                {
+                c.dollartorupee();
+                break;
+                }
+                case 2:
+                {
+                c.rupeetodollar();
+                break;
+                }
+                case 3:
+                {
+                c.eurotorupee();
+                break;
+                }
+                case 4:
+                {
+                c.rupeetoeuro();
+                break;
+                }
+                case 5:
+                {c.yentorupee();
+                break;}
+                case 6 :
+                {
+                c.rupeetoyen();
+                break;
+                }
+                case 7  :
+                {
+                d.mtokm();
+                break;
+                }
+                case 8  :
+                {
+                d.kmtom();
+                break;
+                }
+                case 9  :
+                {
+                d.milestokm();
+                break;
+                }
+                case 10  :
+                {
+                d.kmtomiles();
+                break;
+                }
+                case 11 :
+                {
+                t.hourstominutes();
+                break;
+                }
+                case 12 :
+                {
+                t.hourstoseconds();
+                break;
+                }
+                case 13 :
+                {
+                t.secondstohours();
+                break;
+                }
+                case 14 :
+                {
+                t.minutestohours();
+                break;
+                }}
+                System.out.println("Enter 0 to  quit and 1 to continue ");
+                ch=s.nextInt();
+                }while(ch==1);
+                }
+                }
                                 </textarea>
           </div>
           <div class="details">
@@ -492,7 +661,114 @@ onclick="myFunction6()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</
       <div class="card card3">
           <div class="container">
               <textarea name="" id="myInput6" cols="90" rows="10">
-            updating soon...
+
+
+                import java.util.Scanner;
+                interface Resume{
+                   public void biodata();
+                  }
+                  
+                abstract class staff 
+                {
+                    abstract void getdata(); 
+                }
+                
+                abstract class candidate {
+                   
+                    abstract void getdata(); 
+                }
+                
+                class Teacher extends staff implements Resume{
+                    String name;
+                    String degree;
+                    String university;
+                    String location;
+                    String branch;
+                    String achievements;
+                    int experience;
+                    long phone;
+                    public void getdata(){
+                        Scanner obj = new Scanner(System.in);
+                        System.out.println(" Enter the Teacher Name : ");
+                        this.name = obj.next();
+                        System.out.println(" Enter the Teacher Qualification : ");
+                        this.degree = obj.next();
+                        System.out.println(" Enter the Teacher Educational University : ");
+                        this.university = obj.next();
+                        System.out.println(" Enter the Teacher Location : ");
+                        this.location = obj.next();
+                        System.out.println(" Enter the Teacher Branch : ");
+                        this.branch = obj.next();
+                        System.out.println(" Enter the Teacher Achievements: ");
+                        this.achievements = obj.next();
+                        System.out.println(" Enter the Teacher Work Experience : ");
+                        this.experience = obj.nextInt();
+                        System.out.println(" Enter the Teacher Contact Number : ");
+                        this.phone = obj.nextLong();
+                    }
+                
+                    public void biodata(){
+                        System.out.println("######### TEACHER RESUME ##########");
+                        System.out.println("Name: "+ name);
+                        System.out.println("Qualification: "+ degree);
+                        System.out.println("University: "+ university);
+                        System.out.println("Location: "+ location);
+                        System.out.println("Branch: "+ branch);
+                        System.out.println("Achievements: "+ achievements);
+                        System.out.println("Experience: "+ experience);
+                        System.out.println("Contact: "+ phone);
+                        System.out.println("######### RESUME ENDS ##########");
+                        System.out.println();
+                        System.out.println();
+                    }
+                }
+                
+                class Student extends candidate implements Resume{
+                    String name;
+                    String usn;
+                    String result;
+                    String discipline;
+                    long phone;
+                    public void getdata(){
+                        Scanner obj = new Scanner(System.in);
+                        System.out.println(" Enter the Student Name : ");
+                        name = obj.nextLine();
+                        System.out.println(" Enter the Student USN : ");
+                        usn = obj.next();
+                        System.out.println(" Enter the Student Result : ");
+                        result = obj.next();
+                        System.out.println(" Enter the Student Descipline : ");
+                        this.discipline = obj.next();
+                        System.out.println(" Enter the Student Contact Number : ");
+                        this.phone = obj.nextLong();
+                    }
+                
+                    public void biodata(){
+                    System.out.println("\n######### STUDENT RESUME ##########\n");
+                        System.out.println("\nName: "+ name);
+                        System.out.println("\nUSN: "+ usn);
+                        System.out.println("\nResult: "+ result);
+                        System.out.println("\nDiscipline: "+ discipline);
+                        System.out.println("\nContact Number: "+ phone);
+                        System.out.println("\n######### RESUME ENDS ##########\n");
+                    }
+                }
+                
+                
+                
+                class Main {
+                    public static void main(String[] args) {
+                        System.out.println("\n Interface\n ");
+                        //creating objects
+                        Student s = new Student();
+                        s.getdata();
+                        s.biodata();
+                        Teacher t = new Teacher();
+                        t.getdata();
+                        t.biodata();
+                        
+                    }
+                }
                                 </textarea>
           </div>
           <div class="details">
@@ -503,6 +779,522 @@ onclick="myFunction7()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</
               <p></p>
           </div>
 </div>   
+      <!--program 8   -->  
+      <div class="card card3">
+        <div class="container">
+            <textarea name="" id="myInput7" cols="90" rows="10">
+              import java.util.*;
+              // class for Even Number
+              class EvenNum implements Runnable {  
+                  public int a;  
+                  public EvenNum(int a) {   
+                      this.a = a;  
+                  }  
+                  public void run() {   
+                      System.out.println("The Thread "+ a +" is EVEN and Square of " + a + " is : " + a * a);  
+                  } 
+              } // class for Odd Number
+              class OddNum implements Runnable {  
+                  public int a;  
+                  public OddNum(int a)  {   
+                      this.a = a;  
+                  }  
+                  public void run()  {   
+                      System.out.println("The Thread "+ a +" is ODD and Cube of " + a + " is: " + a * a * a);  
+                  }
+              }
+              // class to generate random number
+              class RandomNumGenerator extends Thread  {  
+                  public void run() {    
+                      int n = 0;   
+                      Random rand = new Random();   
+                      try  {    
+                          for (int i = 0; i < 5; i++) {    
+                              n = rand.nextInt(10);     
+                              System.out.println("Generated Number is " + n);   
+                              // check if random number is even or odd
+                              if (n % 2 == 0) { 
+                                  Thread thread1 = new Thread(new EvenNum(n));      
+                                  thread1.start();     
+                              } 
+                              else {      
+                                  Thread thread2 = new Thread(new OddNum(n));      
+                                  thread2.start();     
+                              } 
+                      // thread wait for 1 second
+                      Thread.sleep(1000);     
+                      System.out.println("------------------------------------");    
+                          }   
+                      }    
+                      catch (Exception ex) {     
+                          System.out.println(ex.getMessage());   
+                      }  
+                  } 
+              }
+              // Driver class
+              class Multi {  
+                  public static void main(String[] args) {    
+                      RandomNumGenerator rand_num = new RandomNumGenerator();   
+                      rand_num.start();  
+              }
+              }                             
+
+
+
+                              </textarea>
+        </div>
+        <div class="details">
+          
+<button class="texts-btn"  id="copied7"
+onclick="myFunction8()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</button>
+            <h3>PROGRAM 8</h3>
+            <p></p>
+        </div>
+</div>   
+
+       <!--program 9   -->  
+    <div class="card card3">
+        <div class="container">
+            <textarea name="" id="myInput8" cols="90" rows="10">
+                              
+              import java.util.*;
+              import java.io.*;
+              public class arraylistexample
+              {
+              public static void main(String args[])
+              {   
+              ArrayList<String> obj = new ArrayList<>();
+              Scanner in=new Scanner(System.in);
+              int c,ch;
+              int i,j;
+              String str,str1; 
+              while(true){
+                  
+              System.out.println("STRING MANIPULATION");
+              System.out.println("******************************");
+              System.out.println(" 1. Append at end \t 2.Insert at particular index \t 3.Search \t");
+              System.out.println( "4.List string that starting with letter \t 5. Exit \t" );
+              System.out.println("Enter the choice ");
+              c=in.nextInt();
+              
+               switch(c)
+               {	
+               case 1:
+               
+                  System.out.println("Enter the string ");
+                  str=in.next();
+                  obj.add(str);
+                  System.out.println("The array list has following elements: "+obj);
+                  break;
+               
+              case 2:
+              
+                  System.out.println("Enter the string ");
+                  str=in.next();
+                  System.out.println("Specify the index to insert");
+                  i=in.nextInt();
+                  obj.add(i,str);
+                  System.out.println("The array list has following elements: "+obj);
+                  break;
+              
+              case 3:
+              
+                  System.out.println("Enter the string to search ");
+                  str=in.next();
+                  j=obj.indexOf(str);
+                  if(j==-1)
+                      System.out.println("Element not found");
+                  else
+                      System.out.println("Index of: "+str+" is "+(j+1));
+                  break;
+              
+              case 4:
+              
+                  System.out.println("Enter the character to List string that starts with specified character");
+                   str=in.next();
+                   for(String info : obj)
+                   {
+                      if(info.startsWith(str))
+                      {
+                          System.out.println(info);
+                      }
+                  }	
+                  break;
+              
+              case 5:
+                    System.out.println("Invalid Input");
+                    System.exit(0);
+               
+                  }
+                 }
+              }
+              }
+                              </textarea>
+        </div>
+        <div class="details">
+          
+<button class="texts-btn"  id="copied8"
+onclick="myFunction9()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</button>
+            <h3>PROGRAM 9</h3>
+            <p></p>
+        </div>
+</div>   
+         <!--program 10   -->  
+    <div class="card card3">
+        <div class="container">
+            <textarea name="" id="myInput9" cols="90" rows="10">
+              import java.util.Scanner;
+              public class Main  {
+                   static void check() throws ArithmeticException   //The throws keyword is used to declare the list of exception that a method may throw during execution of program
+                     {  
+                          System.out.println("Inside check function");
+                          throw new ArithmeticException("Using Throws Keyword");
+                      }
+                 public static void main(String args[])  {
+                   //try block 
+                    Scanner in = new Scanner(System.in);
+                    Main ob = new Main();
+                   try{  
+                          System.out.println("::Inside Try block 1 ::");
+                          System.out.println("Enter the value of a : ");
+                          int a = in.nextInt();
+                           System.out.println("Enter the value of b : ");
+                          int b = in.nextInt();
+                          int num=a/b;  
+                          System.out.println(num); 
+                          
+                    }  
+                    //catch block
+                    catch(ArithmeticException e){
+                        System.out.println("::Inside Catch block 1 ::");
+                       System.out.println("ArithmeticException::Number divided by zero");
+                    }  
+                     try{  
+                          System.out.println("::Inside Try  block 2::");
+                          System.out.println("Enter the value of a : ");
+                          int a = in.nextInt();
+                           System.out.println("Enter the value of b : ");
+                          int b = in.nextInt();
+                          if(b==0)
+                          throw new ArithmeticException("Using Throw "); //The throw keyword is used to throw an exception explicitly
+                     }
+                     catch(ArithmeticException e)
+                     {
+                          System.out.println("Exception caught in catch block : 2 ");
+                      }
+                       try
+                      {
+                           check();
+                       }
+                      catch(ArithmeticException e)
+                       {
+                           System.out.println("Caught with throws block" + e);
+                       }
+                    
+                   
+                     
+                    //finally block
+                    finally{
+                        System.out.println("::Inside Finally block::");
+                    }  
+                    System.out.println("Rest of the code continues...");  
+                 }   
+              }                              
+
+
+
+
+                              </textarea>
+        </div>
+        <div class="details">
+          
+<button class="texts-btn"  id="copied9"
+onclick="myFunction10()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</button>
+            <h3>PROGRAM 10</h3>
+            <p></p>
+        </div>
+</div>  
+         <!--program 11   -->  
+         <div class="card card3">
+          <div class="container">
+              <textarea name="" id="myInput10" cols="90" rows="10">
+                import java.util.Scanner;
+                import java.io.File;
+                public class filedemo
+                {
+                public static void main(String args[])
+                {
+                String filename;
+                Scanner s=new Scanner(System.in);
+                System.out.println("Enter the path of File : ");
+                filename=s.nextLine();
+                File f1=new File(filename);
+                
+                System.out.println("FILE INFORMATION");
+                System.out.println("*****************");
+                System.out.println("NAME OF THE FILE "+f1.getName());
+                System.out.println("PATH OF THE FILE "+f1.getPath());
+                System.out.println("PARENT"+f1.getParent());
+                if(f1.exists())
+                System.out.println("THE FILE EXISTS ");
+                else
+                System.out.println("THE FILE DOES NOT EXISTS ");
+                
+                if(f1.canRead())
+                System.out.println("THE FILE CAN BE READ ");
+                else
+                System.out.println("THE FILE CANNOT BE READ  ");
+                
+                if(f1.canWrite())
+                System.out.println("WRITE OPERATION IS PERMITTED");
+                else
+                System.out.println("WRITE OPERATION IS NOT PERMITTED");
+                
+                if(f1.isDirectory())
+                System.out.println("IT IS A DIRECTORY ");
+                else
+                System.out.println("NOT A DIRECTORY");
+                
+                if(f1.isFile())
+                System.out.println("IT IS A FILE ");
+                else
+                System.out.println("NOT A FILE");
+                
+                
+                
+                System.out.println("File last modified "+ f1.lastModified());
+                
+                System.out.println("LENGTH OF THE FILE  "+f1.length() + " in Bytes");
+                
+                
+                }
+                }                               
+  
+  
+  
+  
+                                </textarea>
+          </div>
+          <div class="details">
+            
+  <button class="texts-btn"  id="copied10"
+  onclick="myFunction11()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</button>
+              <h3>PROGRAM 11</h3>
+              <p></p>
+          </div>
+  </div> 
+           <!--program 12   -->  
+           <div class="card card3">
+            <div class="container">
+                <textarea name="" id="myInput11" cols="90" rows="10">
+             //a)                     
+                  import java.applet.*;
+                  import java.awt.*;
+                  public class MyApplet extends Applet
+                   {
+                      public void paint(Graphics g)
+                      {                  
+                           g.drawString("Welcome to Applet Programming",50,50);  
+                      }
+                  }
+    
+                  <!-------- b) -------->
+                  import javax.swing.*;
+                  import java.awt.event.*;
+                   
+                   
+                  class Main implements ActionListener
+                  {
+                  JFrame f;
+                  JTextField t;
+                  JButton b1,b2,b3,b4,b5,b6,b7,b8,b9,b0,bdiv,bmul,bsub,badd,bdec,beq,bdel,bclr;
+                   
+                  static double a=0,b=0,result=0;
+                  static int operator=0;
+                   
+                  Main()
+                  {
+                  f=new JFrame("Calculator");
+                  t=new JTextField();
+                  b1=new JButton("1");
+                  b2=new JButton("2");
+                  b3=new JButton("3");
+                  b4=new JButton("4");
+                  b5=new JButton("5");
+                  b6=new JButton("6");
+                  b7=new JButton("7");
+                  b8=new JButton("8");
+                  b9=new JButton("9");
+                  b0=new JButton("0");
+                  bdiv=new JButton("/");
+                  bmul=new JButton("*");
+                  bsub=new JButton("-");
+                  badd=new JButton("+");
+                  bdec=new JButton(".");
+                  beq=new JButton("=");
+                  bdel=new JButton("Delete");
+                  bclr=new JButton("Clear");
+                  t.setBounds(30,40,280,30);
+                  b7.setBounds(40,100,50,40);
+                  b8.setBounds(110,100,50,40);
+                  b9.setBounds(180,100,50,40);
+                  bdiv.setBounds(250,100,50,40);
+                  b4.setBounds(40,170,50,40);
+                  b5.setBounds(110,170,50,40);
+                  b6.setBounds(180,170,50,40);
+                  bmul.setBounds(250,170,50,40);
+                  b1.setBounds(40,240,50,40);
+                  b2.setBounds(110,240,50,40);
+                  b3.setBounds(180,240,50,40);
+                  bsub.setBounds(250,240,50,40);
+                  bdec.setBounds(40,310,50,40);
+                  b0.setBounds(110,310,50,40);
+                  beq.setBounds(180,310,50,40);
+                  badd.setBounds(250,310,50,40);
+                  bdel.setBounds(60,380,100,40);
+                  bclr.setBounds(180,380,100,40);
+                  f.add(t);
+                  f.add(b7);
+                  f.add(b8);
+                  f.add(b9);
+                  f.add(bdiv);
+                  f.add(b4);
+                  f.add(b5);
+                  f.add(b6);
+                  f.add(bmul);
+                  f.add(b1);
+                  f.add(b2);
+                  f.add(b3);
+                  f.add(bsub);
+                  f.add(bdec);
+                  f.add(b0);
+                  f.add(beq);
+                  f.add(badd);
+                  f.add(bdel);
+                  f.add(bclr);
+                  f.setLayout(null);
+                  f.setVisible(true);
+                  f.setSize(350,500);
+                  f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                  f.setResizable(false);
+                  b1.addActionListener(this);
+                  b2.addActionListener(this);
+                  b3.addActionListener(this);
+                  b4.addActionListener(this);
+                  b5.addActionListener(this);
+                  b6.addActionListener(this);
+                  b7.addActionListener(this);
+                  b8.addActionListener(this);
+                  b9.addActionListener(this);
+                  b0.addActionListener(this);
+                  badd.addActionListener(this);
+                  bdiv.addActionListener(this);
+                  bmul.addActionListener(this);
+                  bsub.addActionListener(this);
+                  bdec.addActionListener(this);
+                  beq.addActionListener(this);
+                  bdel.addActionListener(this);
+                  bclr.addActionListener(this);
+                  }
+                   
+                  public void actionPerformed(ActionEvent e)
+                  {
+                  if(e.getSource()==b1)
+                  t.setText(t.getText().concat("1"));
+                  if(e.getSource()==b2)
+                  t.setText(t.getText().concat("2"));
+                  if(e.getSource()==b3)
+                  t.setText(t.getText().concat("3"));
+                  if(e.getSource()==b4)
+                  t.setText(t.getText().concat("4"));
+                  if(e.getSource()==b5)
+                  t.setText(t.getText().concat("5"));
+                  if(e.getSource()==b6)
+                  t.setText(t.getText().concat("6"));
+                  if(e.getSource()==b7)
+                  t.setText(t.getText().concat("7"));
+                  if(e.getSource()==b8)
+                  t.setText(t.getText().concat("8"));
+                  if(e.getSource()==b9)
+                  t.setText(t.getText().concat("9"));
+                  if(e.getSource()==b0)
+                  t.setText(t.getText().concat("0"));
+                  if(e.getSource()==bdec)
+                  t.setText(t.getText().concat("."));
+                  if(e.getSource()==badd)
+                  {
+                  a=Double.parseDouble(t.getText());
+                  operator=1;
+                  t.setText("");
+                  }
+                  if(e.getSource()==bsub)
+                  {
+                  a=Double.parseDouble(t.getText());
+                  operator=2;
+                  t.setText("");
+                  }
+                  if(e.getSource()==bmul)
+                  {
+                  a=Double.parseDouble(t.getText());
+                  operator=3;
+                  t.setText("");
+                  }
+                  if(e.getSource()==bdiv)
+                  {
+                  a=Double.parseDouble(t.getText());
+                  operator=4;
+                  t.setText("");
+                  }
+                  if(e.getSource()==beq)
+                  {
+                  b=Double.parseDouble(t.getText());
+                  switch(operator)
+                  {
+                  case 1: result=a+b;
+                  break;
+                  case 2: result=a-b;
+                  break;
+                  case 3: result=a*b;
+                  break;
+                  case 4: result=a/b;
+                  break;
+                  default: result=0;
+                  }
+                  t.setText(""+result);
+                  }
+                  if(e.getSource()==bclr)
+                  t.setText("");
+                  if(e.getSource()==bdel)
+                  {
+                  String s=t.getText();
+                  t.setText("");
+                  for(int i=0;i<s.length()-1;i++)
+                  t.setText(t.getText()+s.charAt(i));
+                  }
+                  }
+                   
+                  public static void main(String[] args )
+                  {
+                  Main m = new Main();
+                  }
+                  }
+    
+    
+                                  </textarea>
+            </div>
+            <div class="details">
+              
+    <button class="texts-btn"  id="copied11"
+    onclick="myFunction12()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</button>
+                <h3>PROGRAM 12</h3>
+                <p></p>
+            </div>
+    </div> 
+
+
+
+
+<!-- upload -->
   <div class="upload"> 
               <a onclick="upload()"> 
              
