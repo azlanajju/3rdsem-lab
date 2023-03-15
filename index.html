@@ -14,6 +14,7 @@
   gtag('config', 'G-K0WDZ9THB3');
 </script>
   <title>Lab Programs</title>
+  
   <link rel="icon" type="image/x-icon" href="/error/favicon.ico">
   
   <!-- HTML -->
@@ -22,23 +23,25 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/java/cn.css">
 </head>
 
 <body>
- 
-
-
+  
   <div class="sems">
-    <a class="active" href="page not linked">sem3</a>
 
-    <a   href="open 404">sem4</a>
 
-    <a  href="https://labprograms.netlify.app">sem5</a>
 
-    <a href="page not linked">sem6</a>
+    <a class="active"  href="">sem3</a>
+
+    <a   href="https://4thsemlab.netlify.app/">sem4</a>
+
+    <a href="https://labprograms.netlify.app">sem5</a>
+
+    <a href="not available">sem6</a>
 
     <a href="https://7thsemlab.netlify.app/">sem7</a>
+
 
 
 
@@ -47,15 +50,14 @@
   <!--      subjects  -->
  
   <div class="sub">
-    <div>
-     
-      <a href="/java/cn.html">
+    <div >
+      <a  href="java/cn.html">
         JAVA
       </a>
     </div>
     <div class="subactiv" >
       <a >
-       DSA
+        DSA
       </a>
     </div>
 
@@ -66,221 +68,223 @@
     <div class="card card1">
       <div class="container">
         <textarea name="" id="myInput" >
-          
+                  
 #include<stdlib.h>
-#include<stdio.h>
-#define MAX 20
-void create(int a[], int n);
-void display(int a[], int n);
-void insert(int a[], int n, int ELE, int POS);
-void delete(int a[], int n, int POS);
-int main()
-{
-int choice,n=0,m,a[MAX],ELEM,POS,i,j;
-while(1)
-{
-printf("\n\n**********************MENU*****************");
-printf("\n1.Create an array\n2.Display the array\n3.Insert an element at a given position POS\n4.Delete an element at a given position POS\n5.Exit\n");
-printf("Enter your choice : ");
-scanf("%d", &choice);
-switch(choice)
-{
-case 1: printf("Enter the number of elements : ");
-            
-scanf("%d", &n);
-printf("Enter the elements\n");
-create(a,n);
-break;
-case 2: if(n>0)
-            
-            display(a,n);
-            else
-            printf("Create the array first\n");
-            
-            break;
-            case 3: if(n>0)
-            
-            {
-            printf("Enter the element to be inserted :");
-            
-            scanf("%d", &ELEM);
-            printf("Enter the position to be inserted :");
-            
-            scanf("%d", &POS);
-            if(POS <= (n+1))
-            {
-            insert(a,n,ELEM,POS);
-            n++;
-            display(a,n);
-            }
-            else
-            printf("Enter the valid position\n");
-            
-            }
-            else
-            printf("Create the array first\n");
-            
-            break;
-            case 4: if(n>0)
-            
-            {
-            printf("Enter the position from which to be deleted : ");
-            
-            scanf("%d", &POS);
-            if(POS <= n)
-            {
-            delete(a,n,POS);
-            n--;
-            display(a,n);
-            }
-            else
-            printf("Enter the valid position\n");
-            
-            }
-            else
-            printf("Create the array first\n");
-            break;
-            case 5: exit(0);
-            }
-            }
-            }
-            void create(int a[MAX], int n)
-            {
-            int i;
-            for(i=0;i<n;i++)
-            {
-            scanf("%d",&a[i]);
-            }
-            }
-            void display(int a[MAX], int n)
-            {
-            int i;
-            printf("\nThe elements of array are\n");
-            for(i=0; i<n; i++)
-            {
-            printf("%d ",a[i]);
-            }
-            }
-            void insert(int a[MAX], int n, int ELEM, int POS)
-            {
-            int i,j;
-            for(i=1;i<=n;i++)
-            {
-            if(i == POS)
-            {
-            for(j=n;j>=i;j--)
-            {
-            
-            a[j] = a[j-1];
-            }
-            a[i-1]=ELEM;
-            break;
-            
-            }
-            }
-            if(POS==(n+1))
-            a[i-1] = ELEM;
-            
-            printf("The element %d inserted at position %d", ELEM,
-            POS);
-            }
-            void delete(int a[MAX], int n, int POS)
-            {
-            int i,j,ELEM;
-            for(i=1;i<=n;i++)
-            {
-            
-            if(i == POS)
-            {
-            ELEM = a[i-1];
-            for(j=i-1;j<n;j++)
-            
-            {
-            
-            a[j] = a[j+1];
-            }
-            break;
-            
-            }
-            }
-            printf("The element %d deleted from position %d", ELEM,
-            
-            POS);
-            }
+  #include<stdio.h>
+  #define MAX 20
+  void create(int a[], int n);
+  void display(int a[], int n);
+  void insert(int a[], int n, int ELE, int POS);
+  void delete(int a[], int n, int POS);
+  int main()
+  {
+  int choice,n=0,m,a[MAX],ELEM,POS,i,j;
+  while(1)
+  {
+  printf("\n\n**********************MENU*****************");
+  printf("\n1.Create an array\n2.Display the array\n3.Insert an element at a given position POS\n4.Delete an element at a given position POS\n5.Exit\n");
+  printf("Enter your choice : ");
+  scanf("%d", &choice);
+  switch(choice)
+  {
+  case 1: printf("Enter the number of elements : ");
+              
+  scanf("%d", &n);
+  printf("Enter the elements\n");
+  create(a,n);
+  break;
+  case 2: if(n>0)
+              
+              display(a,n);
+              else
+              printf("Create the array first\n");
+              
+              break;
+              case 3: if(n>0)
+              
+              {
+              printf("Enter the element to be inserted :");
+              
+              scanf("%d", &ELEM);
+              printf("Enter the position to be inserted :");
+              
+              scanf("%d", &POS);
+              if(POS <= (n+1))
+              {
+              insert(a,n,ELEM,POS);
+              n++;
+              display(a,n);
+              }
+              else
+              printf("Enter the valid position\n");
+              
+              }
+              else
+              printf("Create the array first\n");
+              
+              break;
+              case 4: if(n>0)
+              
+              {
+              printf("Enter the position from which to be deleted : ");
+              
+              scanf("%d", &POS);
+              if(POS <= n)
+              {
+              delete(a,n,POS);
+              n--;
+              display(a,n);
+              }
+              else
+              printf("Enter the valid position\n");
+              
+              }
+              else
+              printf("Create the array first\n");
+              break;
+              case 5: exit(0);
+              }
+              }
+              }
+              void create(int a[MAX], int n)
+              {
+              int i;
+              for(i=0;i<n;i++)
+              {
+              scanf("%d",&a[i]);
+              }
+              }
+              void display(int a[MAX], int n)
+              {
+              int i;
+              printf("\nThe elements of array are\n");
+              for(i=0; i<n; i++)
+              {
+              printf("%d ",a[i]);
+              }
+              }
+              void insert(int a[MAX], int n, int ELEM, int POS)
+              {
+              int i,j;
+              for(i=1;i<=n;i++)
+              {
+              if(i == POS)
+              {
+              for(j=n;j>=i;j--)
+              {
+              
+              a[j] = a[j-1];
+              }
+              a[i-1]=ELEM;
+              break;
+              
+              }
+              }
+              if(POS==(n+1))
+              a[i-1] = ELEM;
+              
+              printf("The element %d inserted at position %d", ELEM,
+              POS);
+              }
+              void delete(int a[MAX], int n, int POS)
+              {
+              int i,j,ELEM;
+              for(i=1;i<=n;i++)
+              {
+              
+              if(i == POS)
+              {
+              ELEM = a[i-1];
+              for(j=i-1;j<n;j++)
+              
+              {
+              
+              a[j] = a[j+1];
+              }
+              break;
+              
+              }
+              }
+              printf("The element %d deleted from position %d", ELEM,
+              
+              POS);
+              }
+      
     
-  
+                    
                   </textarea>
       </div>
       <div class="details">
 
         <button class="texts-btn" id="copied" onclick="myFunction1()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</button>
-        <h3>
-        PROGRAM 1</h3>
+        <h3>PROGRAM 1</h3>
         <p></p>
       </div>
     </div>
     <div class="card card2">
       <div class="container">
         <textarea name="" id="myInput1" cols="90" rows="10">
-     #include<stdio.h>
-#include<stdlib.h>
-void ReadStrings();
-void PatternMatching(char[], char[], char[]);
-char STR[100],PAT[100],REP[100];
-int main()
-{
-ReadStrings(STR,PAT,REP);
-PatternMatching(STR, PAT, REP);
-}
-void ReadStrings(char STR[100], char PAT[100], char REP[100])
-{
-printf("Enter the main string STR : ");
-gets(STR);
-printf("Enter the pattern string PAT : ");
-gets(PAT);
-printf("Enter the replace string REP : ");
-gets(REP);
-}
-void PatternMatching(char STR[100], char PAT[100], char REP[100])
-{
-int i,j,k,m,c,flag,count;
-i=m=c=j=count=flag=0;
-char RESULT[100];
-while(STR[c] != '\0')
-{
-if(STR[m] == PAT[i])
-{
-i++;
-m++;
-if(PAT[i] =='\0')
-{
-for(k=0;REP[k] !='\0';k++,j++)
+          #include<stdio.h>
+            #include<stdlib.h>
+            void ReadStrings();
+            void PatternMatching(char[], char[], char[]);
+            char STR[100],PAT[100],REP[100];
+            int main()
+            {
+            ReadStrings(STR,PAT,REP);
+            PatternMatching(STR, PAT, REP);
+            }
+            void ReadStrings(char STR[100], char PAT[100], char REP[100])
+            {
+            printf("Enter the main string STR : ");
+            gets(STR);
+            printf("Enter the pattern string PAT : ");
+            gets(PAT);
+            printf("Enter the replace string REP : ");
+            gets(REP);
+            }
+            void PatternMatching(char STR[100], char PAT[100], char REP[100])
+            {
+            int i,j,k,m,c,flag,count;
+            i=m=c=j=count=flag=0;
+            char RESULT[100];
+            while(STR[c] != '\0')
+            {
+            if(STR[m] == PAT[i])
+            {
+            i++;
+            m++;
+            if(PAT[i] =='\0')
+            {
+            for(k=0;REP[k] !='\0';k++,j++)
+            
+            RESULT[j]=REP[k];
+            i=0;
+            c=m;
+            count++;
+            flag =1;
+            }
+            }
+            else
+            {
+            RESULT[j]=STR[c];
+            j++;
+            c++;
+            m=c;
+            i=0;
+            }
+            }
+            if(flag == 0)
+            printf("Pattern does not found\n");
+            else
+            {
+            RESULT[j]='\0';
+            printf("Pattern found %d times\n",count);
+            printf("The resultant string is\n%s\n",RESULT);
+            }
+            }
+                              
 
-RESULT[j]=REP[k];
-i=0;
-c=m;
-count++;
-flag =1;
-}
-}
-else
-{
-RESULT[j]=STR[c];
-j++;
-c++;
-m=c;
-i=0;
-}
-}
-if(flag == 0)
-printf("Pattern does not found\n");
-else
-{
-RESULT[j]='\0';
-printf("Pattern found %d times\n",count);
-printf("The resultant string is\n%s\n",RESULT);
-}
-}
                   </textarea>
 
       </div>
@@ -294,207 +298,209 @@ printf("The resultant string is\n%s\n",RESULT);
     <div class="card card3">
       <div class="container">
         <textarea name="" id="myInput2" cols="90" rows="10">
-                             #include<stdio.h>
-#include<stdlib.h>
-#include<math.h>
-#define MAX 3
-void push(int[], int, int);
-int pop(int[], int);
-void palin(int[], int);
-void display(int[], int);
-int main()
-{
-int choice,stack[MAX],top=-1,ele;
-while(1)
-{
-printf("\n\n**********************MENU*****************");
-printf("\n1. Push an Element to Stack\n2. Pop an Element
-from Stack\n3. Checking Stack for Palindrome\n4. Display the status of
-Stack\n5. Exit\n");
-printf("Enter your choice : ");
-scanf("%d", &choice);
-switch(choice)
-{
-case 1: if(top < MAX-1)
-{
-printf("Enter the element to be pushed :
-");
-scanf("%d",&ele);
-top++;
-push(stack,ele,top);
-}
-else
-printf("Stack is full\n");
-break;
-case 2: if(top >= 0)
-{
-ele = pop(stack,top);
-top--;
-printf("The element popped is %d",ele);
-}
-else
-printf("Stack is empty\n");
-break;
-case 3: palin(stack, top);
-break;
-case 4: display(stack,top);
-break;
-case 5: exit(0);
-}
-}
-}
-void push(int stack[MAX],int ele, int top)
-{
-stack[top] = ele;
-}
-int pop(int stack[MAX], int top)
-{
-return stack[top];
-}
-void palin(int stack[MAX],int top)
-{
-int i, num=0,count=0,temp=0,dup=0,digit=0,rev=0;
-if(top >= 0)
-{
-for(i=top;i>=0;i--)
-{
-num = stack[i];
-while(num != 0)
-{
-num = num/10;
-count++;
-}
-temp = temp * pow(10,count) + stack[i];
-count = 0;
-}
-dup = temp;
-while(temp != 0)
-{
-digit = temp%10;
-rev = rev * 10 + digit;
-temp = temp/10;
-}
-if(dup == rev)
-printf("The content of stack is palindrome");
-else
-printf("The content of stack is not palindrome");
-}
-else
-printf("Stack is empty\n");
-}
-void display(int stack[MAX], int top)
-{
-int i;
-if(top >= 0)
-{
-printf("The elements of stack are\n\n");
-for(i=0; i<=top; i++)
-printf("%d ",stack[i]);
-}
-else
-printf("Stack is empty\n");
-}
-        </textarea>
+          #include<stdio.h>
+            #include<stdlib.h>
+            #include<math.h>
+            #define MAX 3
+            void push(int[], int, int);
+            int pop(int[], int);
+            void palin(int[], int);
+            void display(int[], int);
+            int main()
+            {
+            int choice,stack[MAX],top=-1,ele;
+            while(1)
+            {
+            printf("\n\n**********************MENU*****************");
+            printf("\n1. Push an Element to Stack\n2. Pop an Element
+            from Stack\n3. Checking Stack for Palindrome\n4. Display the status of
+            Stack\n5. Exit\n");
+            printf("Enter your choice : ");
+            scanf("%d", &choice);
+            switch(choice)
+            {
+            case 1: if(top < MAX-1)
+            {
+            printf("Enter the element to be pushed :
+            ");
+            scanf("%d",&ele);
+            top++;
+            push(stack,ele,top);
+            }
+            else
+            printf("Stack is full\n");
+            break;
+            case 2: if(top >= 0)
+            {
+            ele = pop(stack,top);
+            top--;
+            printf("The element popped is %d",ele);
+            }
+            else
+            printf("Stack is empty\n");
+            break;
+            case 3: palin(stack, top);
+            break;
+            case 4: display(stack,top);
+            break;
+            case 5: exit(0);
+            }
+            }
+            }
+            void push(int stack[MAX],int ele, int top)
+            {
+            stack[top] = ele;
+            }
+            int pop(int stack[MAX], int top)
+            {
+            return stack[top];
+            }
+            void palin(int stack[MAX],int top)
+            {
+            int i, num=0,count=0,temp=0,dup=0,digit=0,rev=0;
+            if(top >= 0)
+            {
+            for(i=top;i>=0;i--)
+            {
+            num = stack[i];
+            while(num != 0)
+            {
+            num = num/10;
+            count++;
+            }
+            temp = temp * pow(10,count) + stack[i];
+            count = 0;
+            }
+            dup = temp;
+            while(temp != 0)
+            {
+            digit = temp%10;
+            rev = rev * 10 + digit;
+            temp = temp/10;
+            }
+            if(dup == rev)
+            printf("The content of stack is palindrome");
+            else
+            printf("The content of stack is not palindrome");
+            }
+            else
+            printf("Stack is empty\n");
+            }
+            void display(int stack[MAX], int top)
+            {
+            int i;
+            if(top >= 0)
+            {
+            printf("The elements of stack are\n\n");
+            for(i=0; i<=top; i++)
+            printf("%d ",stack[i]);
+            }
+            else
+            printf("Stack is empty\n");
+            }
+                    
+                                  </textarea>
       </div>
       <div class="details">
 
         <button class="texts-btn" id="copied2" onclick="myFunction3()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</button>
-        <h3>PROGRAM 4</h3>
+        <h3>PROGRAM 3</h3>
         <p></p>
       </div>
     </div>
            
-        <!--  program 4     --> 
+        <!--  program 4      -->
         <div class="card card1">
             <div class="container">
                 <textarea  name="" id="myInput3" cols="90" rows="10">
 
-                #include<stdio.h>
-#include<stdlib.h>
-int stack[20];
-int top = -1;
-void push(char);
-char pop();
-int incmprc(char);
-int instprc(char);
-void IntoPost(char[], char[]);
-int main()
-{
-char infix[20], postfix[20];
-printf("Enter the valid infix expression : ");
-scanf("%s",infix);
-push('#');
-IntoPost(infix,postfix);
-printf("The corresponding postfix expression is :
-\n%s\n",postfix);
-}
-void push(char ch)
-{
-stack[++top]=ch;
-}
-char pop()
-{
-return stack[top--];
-}
-int incmprc(char ch)
-{
-switch(ch)
-{
-case '+' :
-case '-' : return 1;
-case '*' :
-case '/' :
-case '%' : return 2;
-case '^' : return 3;
-}
-}
-int instprc(char ch)
-{
-switch(ch)
-{
-case '#' :
-case '(' : return 0;
-case '+' :
-case '-' : return 1;
-case '*' :
-case '/' :
-case '%' : return 2;
-case '^' : return 3;
-}
-}
-void IntoPost(char infix[20], char postfix[20])
-{
-int i=0,j=0;
-char ch;
-ch = infix[i++];
-while(ch !='\0')
-{
-switch(ch)
-{
-case '(': push(ch);
-break;
-case ')': while(stack[top]!='(')
-postfix[j++] = pop();
-pop();
-break;
-case '^':
-case '+':
-case '-':
-case '*':
-case '/':
-case '%': while(incmprc(ch) <= instprc(stack[top]))
-postfix[j++] = pop();
-push(ch);
-break;
-default : postfix[j++] = ch;
-}
-ch = infix[i++];
-}
-while(stack[top] != '#')
-postfix[j++] = pop();
-postfix[j]= '\0';
-}
-
+                  #include<stdio.h>
+                    #include<stdlib.h>
+                    int stack[20];
+                    int top = -1;
+                    void push(char);
+                    char pop();
+                    int incmprc(char);
+                    int instprc(char);
+                    void IntoPost(char[], char[]);
+                    int main()
+                    {
+                    char infix[20], postfix[20];
+                    printf("Enter the valid infix expression : ");
+                    scanf("%s",infix);
+                    push('#');
+                    IntoPost(infix,postfix);
+                    printf("The corresponding postfix expression is :
+                    \n%s\n",postfix);
+                    }
+                    void push(char ch)
+                    {
+                    stack[++top]=ch;
+                    }
+                    char pop()
+                    {
+                    return stack[top--];
+                    }
+                    int incmprc(char ch)
+                    {
+                    switch(ch)
+                    {
+                    case '+' :
+                    case '-' : return 1;
+                    case '*' :
+                    case '/' :
+                    case '%' : return 2;
+                    case '^' : return 3;
+                    }
+                    }
+                    int instprc(char ch)
+                    {
+                    switch(ch)
+                    {
+                    case '#' :
+                    case '(' : return 0;
+                    case '+' :
+                    case '-' : return 1;
+                    case '*' :
+                    case '/' :
+                    case '%' : return 2;
+                    case '^' : return 3;
+                    }
+                    }
+                    void IntoPost(char infix[20], char postfix[20])
+                    {
+                    int i=0,j=0;
+                    char ch;
+                    ch = infix[i++];
+                    while(ch !='\0')
+                    {
+                    switch(ch)
+                    {
+                    case '(': push(ch);
+                    break;
+                    case ')': while(stack[top]!='(')
+                    postfix[j++] = pop();
+                    pop();
+                    break;
+                    case '^':
+                    case '+':
+                    case '-':
+                    case '*':
+                    case '/':
+                    case '%': while(incmprc(ch) <= instprc(stack[top]))
+                    postfix[j++] = pop();
+                    push(ch);
+                    break;
+                    default : postfix[j++] = ch;
+                    }
+                    ch = infix[i++];
+                    }
+                    while(stack[top] != '#')
+                    postfix[j++] = pop();
+                    postfix[j]= '\0';
+                    }
+                    
+                                      
                   </textarea>
             </div>
             <div class="details">
@@ -506,101 +512,1213 @@ onclick="myFunction4()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</
             </div>
         </div>
         
-          <!--    program5    -->
+          <!--    program5 -->
+
         <div class="card card2">
             <div class="container">
               <textarea  name="" id="myInput4" cols="90" rows="10">
 
+                #include<stdio.h>
+                  #include<stdlib.h>
+                  #include<math.h>
+                  int stack[50];
+                  int top = -1;
+                  void push(int);
+                  int pop();
+                  void push(int num)
+                  {
+                  stack[++top] = num;
+                  }
+                  int pop()
+                  {
+                  return stack[top--];
+                  }
+                  int main()
+                  {
+                  char suffix[50],ch;
+                  int p1,p2,p3,i;
+                  printf("Enter the valid suffix expression : ");
+                  gets(suffix);
+                  for(i=0;suffix[i]!='\0';i++)
+                  {
+                  ch = suffix[i];
+                  //puts(ch);
+                  if(isdigit(ch))
+                  push(ch-'0');
+                  else
+                  {
+                  p2 = pop();
+                  p1 = pop();
+                  switch(ch)
+                  {
+                  case '+': push(p1+p2);
+                  //printf("%d",pop());
+                  break;
+                  case '-': push(p1-p2);
+                  break;
+                  break;
+                  case '/': if(p2 == 0)
+                  {
+                  printf("Divide by Zero error\n");
+                  exit(0);
+                  }
+                  push(p1/p2);
+                  break;
+                  case '%': if(p2 == 0)
+                  {
+                  printf("Divide by Zero error\n");
+                  exit(0);
+                  }
+                  push(p1%p2);
+                  break;
+                  case '^': push(pow(p1,p2));
+                  break;
+                  default : printf("Invalid Expression\n");
+                  }
+                  }
+                  }
+                  printf("The value of given suffix expression is : %d\n",pop());
+                  }
+                  
+                  5.b.
                   #include<stdio.h>
-#include<stdlib.h>
-#include<math.h>
-int stack[50];
-int top = -1;
-void push(int);
-int pop();
-void push(int num)
-{
-stack[++top] = num;
-}
-int pop()
-{
-return stack[top--];
-}
-int main()
-{
-char suffix[50],ch;
-int p1,p2,p3,i;
-printf("Enter the valid suffix expression : ");
-gets(suffix);
-for(i=0;suffix[i]!='\0';i++)
-{
-ch = suffix[i];
-//puts(ch);
-if(isdigit(ch))
-push(ch-'0');
-else
-{
-p2 = pop();
-p1 = pop();
-switch(ch)
-{
-case '+': push(p1+p2);
-//printf("%d",pop());
-break;
-case '-': push(p1-p2);
-break;
-break;
-case '/': if(p2 == 0)
-{
-printf("Divide by Zero error\n");
-exit(0);
-}
-push(p1/p2);
-break;
-case '%': if(p2 == 0)
-{
-printf("Divide by Zero error\n");
-exit(0);
-}
-push(p1%p2);
-break;
-case '^': push(pow(p1,p2));
-break;
-default : printf("Invalid Expression\n");
-}
-}
-}
-printf("The value of given suffix expression is : %d\n",pop());
-}
-
+                  void towers(int, char, char, char);
+                  int main()
+                  {
+                  int n;
+                  char source,dest, auxiliary;
+                  printf("Enter the number of disks : ");
+                  scanf("%d", &n);
+                  printf("\nSOURCE = %c DESTINATION = %c
+                  'A', 'C', 'B');
+                  towers(n,'A','C','B');
+                  }
+                  AUXILIARY = %c\n",
+                  void towers(int n, char source, char dest, char auxiliary)
+                  {
+                  printf("\n\nTOWERS : %d, %c, %c, %c", n, source, dest,
+                  auxiliary);
+                  if(n == 1)
+                  printf("\n\nMove from %c to %c", source,dest);
+                  else
+                  {
+                  towers(n-1,source, auxiliary, dest);
+                  printf("\nMove from %c to %c", source,dest);
+                  towers(n-1,auxiliary, dest, source);
+                  }
+                  printf("\n");
+                  }                   
                   </textarea>
-
                
             </div>
             <div class="details">
               
 <button class="texts-btn"  id="copied4"
 onclick="myFunction5()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</button>
-                <h3>PROGRAM 5 a</h3>
+                <h3>PROGRAM 5</h3>
                 <p></p>
             </div>
         </div>
-          <!--   program 5b      
+        <!--program 6-->    
         <div class="card card3">
+          <div class="container">
+              <textarea name="" id="myInput5" cols="90" rows="10">
+                #include<stdio.h>
+                  #include<stdlib.h>
+                  #define MAX 5
+                  int insert(char[], int, int);
+                  int delete(char[], int, int);
+                  void display(char[], int, int);
+                  int main()
+                  {
+                  int choice,rear = 0,front = 0;
+                  char cirqueue[MAX], ele;
+                  while(1)
+                  {
+                  printf("\n\n**********************MENU*****************");
+                  printf("\n1. Insert an Element on to Circular Queue\n2.
+                  Delete an Element from Circular Queue\n3. Display the status of
+                  Circular Queue\n4. Exit\n");
+                  printf("Enter your choice : ");
+                  scanf("%d", &choice);
+                  switch(choice)
+                  {
+                  case 1: rear = insert(cirqueue,rear,front);
+                  break;
+                  case 2: front = delete(cirqueue,rear,front);
+                  break;
+                  case 3: display(cirqueue,rear,front);
+                  break;
+                  case 4: exit(0);
+                  }
+                  }
+                  }
+                  int insert(char cirqueue[MAX], int rear, int front)
+                  {
+                  int ele;
+                  if(front == (rear + 1) % MAX)
+                  {
+                  printf("Circular Queue Overflow\n");
+                }
+                else
+                {
+                  rear = (rear + 1) % MAX;
+                  printf("Enter the element to be inserted: ");
+                  getc(stdin);
+                  scanf("%c",&ele);
+                  cirqueue[rear] = ele;
+                  }
+                  return rear;
+                  }
+                  int delete(char cirqueue[MAX], int rear, int front)
+                  {
+                  if(front == rear)
+                  {
+                  printf("Circular Queue Underflow\n");
+                  }
+                  else
+                  {
+                  front = (front + 1) % MAX;
+                  printf("The element deleted is : %c\n", cirqueue[front]);
+                  }
+                  return front;
+                  }
+                  void display(char cirqueue[MAX], int rear, int front)
+                  {
+                  int i;
+                  if(front == rear)
+                  printf("Circular Queue Underflow\n");
+                  else
+                  {
+                  printf("The elements of circular queue are\n\n");
+                  i=front;
+                  do
+                  {
+                  i=((i+1)%MAX);
+                  printf("%c ",cirqueue[i]);
+                }
+                while(i!=rear);
+                }
+                }
+
+
+                                </textarea>
+          </div>
+          <div class="details">
+            
+<button class="texts-btn"  id="copied5"
+onclick="myFunction6()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</button>
+              <h3>PROGRAM 6</h3>
+              <p></p>
+          </div>
+</div>   
+
+          </div>
+      <!--program 7   -->  
+      <div class="card card3">
+          <div class="container">
+              <textarea name="" id="myInput6" cols="90" rows="10">
+                #include<stdio.h>
+                  #include<stdlib.h>
+                  #include<string.h>
+                  int count = 0;
+                  struct node
+                  {
+                  int sem, phno;
+                  char usn[50], name[50],branch[50];
+                  struct node *link;
+                  };
+                  struct node *first = NULL, *last = NULL, *temp = NULL, *temp1 = NULL;
+                  void CreateNode()
+                  {
+                  int sem,phno;
+                  char usn[50],name[50],branch[50];
+                  temp=(struct node*)malloc(sizeof(struct node));
+                  printf("\nEnter usn,name, branch, sem, phno of student \n");
+                  scanf("%s %s %s %d %d", usn, name,branch, &sem,&phno);
+                  strcpy(temp->usn,usn);
+                  strcpy(temp->name,name);
+                  strcpy(temp->branch,branch);
+                  temp->sem = sem;
+                  temp->phno = phno;
+                  temp->link=NULL;
+                  count++;
+                  }
+                  void InsertAtFront()
+                  {
+                  if (first == NULL)
+                  {
+                  CreateNode();
+                  first = temp;
+last = first;
+}
+else
+{
+CreateNode();
+temp->link = first;
+first = temp;
+}
+}
+void InsertAtEnd()
+{
+if(first==NULL)
+{
+CreateNode();
+first = temp;
+last = first;
+}
+else
+{
+CreateNode();
+last->link = temp;
+last = temp;
+}
+}
+void Display()
+{
+temp1=first;
+if(temp1 == NULL)
+{
+printf("\nList is empty \n");
+}
+else
+{
+printf("\nThe elements of SLL are :\n");
+while (temp1!= NULL)
+{
+printf("%s %s
+%s
+%d
+%d\n", temp1->usn, temp1-
+>name,temp1->branch,temp1->sem,temp1->phno );
+temp1 = temp1->link;
+}
+}
+printf("Number of students = %d\n", count);
+}
+void DeleteAtEnd()
+{
+struct node *temp;
+temp=first;
+if(first == NULL)
+printf("\nList is empty\n");
+else if(temp->link==NULL)
+{
+printf("The student record deleted is\n%s %s %s %d %d\n",
+temp->usn, temp->name, temp->branch, temp->sem, temp->phno );
+free(temp);
+first=NULL;
+count--;
+}
+else
+{
+while(temp->link!=last)
+temp=temp->link;
+printf("The student record deleted is\n%s %s %s %d %d\n",
+last->usn, last->name,last->branch,last->sem, last->phno );
+free(last);
+temp->link=NULL;
+last=temp;
+count--;
+}
+}
+void DeleteAtFront()
+{
+struct node *temp;
+temp=first;
+if(first == NULL)
+printf("\nList is empty\n");
+else if(temp->link==NULL)
+{
+printf("The student record deleted is\n%s %s %s %d %d",
+temp->usn, temp->name,temp->branch,temp->sem, temp->phno );
+free(temp);
+first=NULL;
+count--;
+}
+else
+{
+first=temp->link;
+printf("The student record deleted is\n%s %s %s %d%d",
+temp->usn, temp->name,temp->branch,temp->sem, temp->phno );
+free(temp);
+count--;
+}
+}
+int main()
+{
+while(1)
+{
+int choice, n, i, choice2, flag1, flag2;
+printf("\n\n**********************MENU*****************");
+printf("\n1. Create a SLL of N students Data by using front
+insertion\n2. Display the status of SLL and count the number of nodes
+in it\n3. Perform Insertion/Deletion at End of SLL\n4. Perform
+Insertion/Deletion at Front of SLL (Demonstaration of SLL as
+STACK)\n5. Exit\n");
+printf("\nEnter your choice : ");
+scanf("%d",&choice);
+switch(choice)
+{
+case 1 : printf("Enter the number of students : ");
+scanf("%d",&n);
+for(i=0;i<n;i++)
+InsertAtFront();
+break;
+case 2 : Display();
+break;
+case 3 : flag1 = 0;
+while(flag1 == 0)
+{
+printf("\n\n1. Insertion\n2. Deletion\n3.
+Exit");
+printf("\n\nEnter your option\n");
+scanf("%d",&choice2);
+switch(choice2)
+{
+case 1 : InsertAtEnd();
+Display();
+break;
+case 2 : DeleteAtEnd();
+Display();
+break;
+case 3 : flag1 = 1;
+break;
+}
+}
+break;
+case 4 : flag2 = 0;
+printf("\n\nDemonstration of STACK\n");
+while(flag2 == 0)
+{
+printf("\n\n1. Insertion\n2. Deletion\n3.
+Exit\n");
+printf("\n\nEnter your option\n");
+scanf("%d",&choice2);
+switch(choice2)
+{
+case 1 : InsertAtFront();
+Display();
+break;
+case 2 : DeleteAtFront();
+Display();
+break;
+case 3 : flag2 = 1;
+break;
+}
+}
+break;
+case 5 : exit(0);
+break;
+}
+}
+}
+
+                                </textarea>
+          </div>
+          <div class="details">
+            
+<button class="texts-btn"  id="copied6"
+onclick="myFunction7()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</button>
+              <h3>PROGRAM 7</h3>
+              <p></p>
+          </div>
+</div>   
+      <!--program 8   -->  
+      <div class="card card3">
+        <div class="container">
+            <textarea name="" id="myInput7" cols="90" rows="10">
+            
+              #include<stdio.h>
+                #include<stdlib.h>
+                #include<string.h>
+                int count=0;
+                struct node
+                {
+                int ssn, phno;
+                float sal;
+                char name[50],dept[50],desig[50];
+                struct node *llink;
+                struct node *rlink;
+                };
+                struct node *first = NULL,*temp = NULL,*temp1=NULL,*temp2=NULL;
+                void CreateNode()
+                {
+                int ssn,phno;
+                float sal;
+                char name[50],dept[50],desig[50];
+                temp =(struct node *)malloc(sizeof(struct node));
+                temp->llink = NULL;
+                temp->rlink = NULL;
+                printf("\nEnter ssn,name,department, designation, salary and phno
+                of employee\n");
+                scanf("%d %s %s %s %f %d", &ssn, name,dept,desig,&sal, &phno);
+                temp->ssn = ssn;
+                strcpy(temp->name,name);
+                strcpy(temp->dept,dept);
+                strcpy(temp->desig,desig);
+                temp->sal = sal;
+temp->phno = phno;
+count++;
+}
+void InsertAtFront()
+{
+if (first == NULL)
+{
+CreateNode();
+first = temp;
+temp1 = first;
+}
+else
+{
+CreateNode();
+temp->rlink = first;
+first->llink = temp;
+first = temp;
+}
+}
+void InsertAtEnd()
+{
+if(first==NULL)
+{
+CreateNode();
+first = temp;
+temp1 = first;
+}
+else
+{
+CreateNode();
+temp1->rlink = temp;
+temp->llink = temp1;
+temp1 = temp;
+}
+}
+void Display()
+{
+temp2 =first;
+if(temp2 == NULL)
+{
+printf("\nList is empty \n");
+}
+else
+{
+printf("\n\nThe elements of DLL are :\n");
+while (temp2!= NULL)
+{
+  printf("%d
+%s
+%s
+%s
+%f
+%d\n", temp2-
+>ssn, temp2->name,temp2->dept,temp2->desig,temp2->sal, temp2->phno );
+temp2 = temp2->rlink;
+}
+}
+printf("Number of employees = %d ", count);
+}
+void DeleteAtEnd()
+{
+struct node *temp;
+temp=first;
+if(first == NULL)
+printf("\nList is empty\n");
+else if(temp->rlink==NULL)
+{
+printf("The employee record deleted is\n%d %s %s %s %f
+%d\n", temp->ssn, temp->name,temp->dept,
+temp->desig,temp->sal, temp->phno );
+free(temp);
+first=NULL;
+count--;
+}
+else
+{
+temp2=temp1->llink;
+temp2->rlink=NULL;
+printf("The employee record deleted is\n%d %s %s %s %f
+%d\n", temp1->ssn, temp1->name,temp1->dept,
+temp1->desig,temp1->sal, temp1->phno );
+free(temp1);
+temp1 = temp2;
+count--;
+}
+}
+void DeleteAtFront()
+{
+struct node *temp;
+temp=first;
+if(first == NULL)
+printf("\nList is empty\n");
+else if(temp->rlink==NULL)
+{
+printf("The employee record deleted is\n%d %s %s %s %f %d",
+temp->ssn, temp->name,temp->dept, temp->desig,temp->sal, temp->phno );
+free(temp);
+first=NULL;
+count--;
+}
+else
+{
+first=first->rlink;
+printf("The employee record deleted is\n%d %s %s %s %f %d",
+temp->ssn, temp->name,temp->dept, temp->desig,temp->sal, temp->phno );
+free(temp); \
+count--;
+}
+}
+int main()
+{
+int choice,choice2,n,i, flag, flag1, flag2;
+first=NULL;
+temp = temp1 = NULL;
+while(1)
+{
+printf("\n\n**********************MENU*****************");
+printf("\n1. Create a DLL of N employees Data by using end
+insertion\n2. Display the status of DLL and count the number of nodes
+in it\n3. Perform Insertion and Deletion at End of DLL\n4. Perform
+Insertion and Deletion at Front of DLL\n5. Demonstaration of DLL as
+DOUBLE ENDED QUEUE\n6. Exit");
+printf("\nEnter your choice : ");
+scanf("%d",&choice);
+switch(choice)
+{
+case 1 : printf("Enter the number of employees : ");
+scanf("%d",&n);
+for(i=0;i<n;i++)
+InsertAtEnd();
+break;
+case 2 : Display();
+break;
+case 3 : flag1 = 0;
+while(flag1 == 0)
+{
+  printf("\n\n1. Insertion\n2. Deletion\n3.
+  Exit");
+  printf("\n\nEnter your option\n");
+  scanf("%d",&choice2);
+  switch(choice2)
+  {
+  case 1 : InsertAtEnd();
+  Display();
+  break;
+  case 2 : DeleteAtEnd();
+  Display();
+  break;
+  case 3 : flag1 = 1;
+  break;
+  }
+}
+break;
+case 4 : flag2 = 0;
+while(flag2 == 0)
+{
+printf("\n\n1. Insertion\n2. Deletion\n3.
+Exit\n");
+printf("\n\nEnter your option\n");
+scanf("%d",&choice2);
+switch(choice2)
+{
+case 1 : InsertAtFront();
+Display();
+break;
+case 2 : DeleteAtFront();
+Display();
+break;
+case 3 : flag2 = 1;
+break;
+}
+}
+break;
+case 5 : printf("Demonstration of DLL as DOUBLE ENDED
+QUEUE\n");
+flag = 0;
+while(flag == 0)
+{
+printf("\n\n1. Insert at end\n2. Delete at
+end\n3. Insert at front\n4. Delete at front\n5. Exit\n\n");
+printf("\nEnter your option : ");
+scanf("%d",&choice2);
+switch(choice2)
+{
+case 1 : InsertAtEnd();
+Display();
+break;
+case 2 : DeleteAtEnd();
+Display();
+break;
+case 3 : InsertAtFront();
+Display();
+break;
+case 4 : DeleteAtFront();
+Display();
+break;
+case 5 : flag = 1;
+break;
+}
+}
+break;
+case 6 : exit(0);
+break;
+}
+}
+}
+
+
+
+
+                              </textarea>
+        </div>
+        <div class="details">
+          
+<button class="texts-btn"  id="copied7"
+onclick="myFunction8()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</button>
+            <h3>PROGRAM 8</h3>
+            <p></p>
+        </div>
+</div>   
+
+       <!--program 9   -->  
+    <div class="card card3">
+        <div class="container">
+            <textarea name="" id="myInput8" cols="90" rows="10">
+          
+              #include<stdio.h>
+                #include<stdlib.h>
+                #include<math.h>
+                struct node
+                {
+                int coef;
+                int xexp;
+                int yexp;
+                int zexp;
+                struct node *link;
+                };
+                typedef struct node *NODE;
+                NODE first = NULL, last = NULL, temp = NULL, poly1 = NULL, poly2 =
+                NULL;
+                void CreateTerm()
+                {
+                int coef, xexp, yexp, zexp;
+                temp=(struct node*)malloc(sizeof(struct node));
+                printf("Enter the coefficient, x power, y power and z power : ");
+                scanf("%d %d %d %d",&coef, &xexp, &yexp, &zexp);
+                temp->coef = coef;
+                temp->xexp = xexp;
+                temp->yexp = yexp;
+temp->zexp = zexp;
+temp->link=NULL;
+}
+void DisplayPoly(NODE poly)
+{
+NODE temp1;
+temp1=poly->link;
+printf("\nThe Polynomial is :\n");
+while (temp1!= poly)
+{
+printf("%dx^(%d)y^(%d)z^(%d)", temp1->coef, temp1->xexp,
+temp1->yexp, temp1->zexp);
+if(temp1->link != poly && temp1->link->coef > 0)
+printf(" + ");
+//else if(temp1->link != poly && temp1->link->coef < 0)
+//printf(" - ");
+temp1 = temp1->link;
+}
+}
+void CreatePoly()
+{
+int n, i;
+NODE header = NULL;
+header = (struct node *)malloc(sizeof(struct node));
+header->coef = header->xexp = header->yexp = header->zexp = -1;
+header->link = header;
+printf("\nEnter the number of terms in the polynomial : ");
+scanf("%d",&n);
+for(i = 1;i <= n; i++)
+{
+if(header->link == header)
+{
+CreateTerm();
+header->link = temp;
+temp->link = header;
+first = header;
+last = temp;
+}
+else
+{
+CreateTerm();
+last->link = temp;
+temp->link = header;
+last = temp;
+}
+}
+DisplayPoly(first);
+}
+void EvaluatePoly()
+{
+int x, y, z, sum = 0;
+NODE temp2;
+printf("\n\nEnter the value for x, y and z : ");
+scanf("%d %d %d", &x, &y, &z);
+temp2 = first->link;
+while(temp2 != first)
+{
+sum = sum + temp2->coef * pow(x,temp2->xexp) * pow(y,
+temp2->yexp) * pow(z,temp2->zexp);
+temp2 = temp2->link;
+}
+printf("The value of polynomial is : %d\n", sum);
+}
+void attach(int coef, int xexp, int yexp, int zexp, NODE *rear)
+{
+NODE temp3;
+temp3=(struct node*)malloc(sizeof(struct node));
+temp3->coef = coef;
+temp3->xexp = xexp;
+temp3->yexp = yexp;
+temp3->zexp = zexp;
+temp3->link = NULL;
+(*rear)->link = temp3;
+}
+void Add(NODE poly1,NODE poly2)
+{
+NODE poly3, poly4, temp2, ptr1, ptr2, header1 = NULL, header2 =
+NULL;
+int result,flag1=0,flag2=0;
+header1 = (struct node *)malloc(sizeof(struct node));
+header1->coef = header1->xexp = header1->yexp = header1->zexp = -
+1;
+header1->link = header1;
+header2 = (struct node *)malloc(sizeof(struct node));
+header2->coef = header2->xexp = header2->yexp = header2->zexp = -
+1;
+header2->link = header2;
+poly3=header1;
+poly4=header2;
+ptr1=poly1->link;
+while(ptr1 != poly1)
+{
+ptr2 = poly2->link;
+while(ptr2 != poly2)
+{
+  if(ptr1->xexp == ptr2->xexp && ptr1->yexp == ptr2-
+>yexp && ptr1->zexp == ptr2->zexp)
+{
+result = 0;
+result = ptr1->coef + ptr2->coef;
+attach(result, ptr1->xexp, ptr1->yexp, ptr1-
+>zexp, &header1);
+header1->link = poly3;
+flag1 = 1;
+attach(ptr2->coef, ptr2->xexp, ptr2->yexp, ptr2-
+>zexp, &header2);
+header2->link = poly4;
+break;
+}
+else
+ptr2 = ptr2->link;
+}
+if(flag1 == 0)
+{
+attach(ptr1->coef, ptr1->xexp, ptr1->yexp, ptr1->zexp,
+&header1);
+header1->link = poly3;
+}
+flag1 = 0;
+ptr1 = ptr1->link;
+}
+ptr2 = poly2->link;
+while(ptr2 != poly2)
+{
+temp2 = poly4->link;
+while(temp2 != poly4)
+{
+if(ptr2->xexp == temp2->xexp && ptr2->yexp == temp2-
+>yexp && ptr2->zexp == temp2->zexp)
+{
+flag2 = 1;
+break;
+}
+else
+temp2 = temp2->link;
+}
+if(flag2 == 0)
+{
+attach(ptr2->coef, ptr2->xexp, ptr2->yexp, ptr2->zexp,
+&header1);
+header1->link = poly3;
+}
+flag2 = 0;
+ptr2 = ptr2->link;
+}
+printf("\n\nResultant Polynomial:");
+DisplayPoly(poly3);
+}
+int main()
+{
+while(1)
+{
+int choice;
+printf("\n\n**********************MENU*****************");
+printf("\n1. Represent and Evaluate the Polynomial\n2. Add
+two Polynomials\n3. Exit\n");
+printf("Enter your choice : ");
+scanf("%d",&choice);
+switch(choice)
+{
+case 1: first = last = NULL;
+CreatePoly();
+EvaluatePoly();
+break;
+case 2: printf("\nPolynomial 1 :\n");
+first = last = NULL;
+CreatePoly();
+poly1=first;
+printf("\n\nPolynomial 2 :\n");
+first = last = NULL;
+CreatePoly();
+poly2=first;
+Add(poly1,poly2);
+break;
+case 3: exit(0);
+break;
+}
+}
+}
+
+                              </textarea>
+        </div>
+        <div class="details">
+          
+<button class="texts-btn"  id="copied8"
+onclick="myFunction9()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</button>
+            <h3>PROGRAM 9</h3>
+            <p></p>
+        </div>
+</div>   
+         <!--program 10   -->  
+    <div class="card card3">
+        <div class="container">
+            <textarea name="" id="myInput9" cols="90" rows="10">
+              #include<stdio.h>
+                #include <stdlib.h>
+                #define MAX 20
+                struct node
+                {
+                int data;
+                struct node *lchild, *rchild;
+                };
+                typedef struct node *NODE;
+                NODE tree = NULL;
+                void CreateBST (int a[MAX], int n)
+                {
+                NODE temp, p, q;
+                int i;
+                for(i=0;i<n;i++)
+                {
+                temp =(struct node *)malloc(sizeof(struct node*));
+                temp->data = a[i];
+                temp->lchild = temp->rchild = NULL;
+                if(tree == NULL)
+tree = temp;
+else
+{
+p = q = tree;
+while(q != NULL)
+{
+p=q;
+if(a[i] < p->data)
+q = p->lchild;
+else if(a[i] > p->data)
+q = p->rchild;
+else
+{
+free(temp);
+break;
+}
+}
+if( q == NULL)
+{
+if(a[i] < p->data)
+p->lchild = temp;
+else
+p->rchild = temp;
+}
+}
+}
+printf("Binary Seacrh Tree created\n\n");
+}
+void Inorder(NODE tree)
+{
+if(tree != NULL)
+{
+Inorder(tree->lchild);
+printf("%d ",tree->data)
+printf("%d ",tree->data);
+Inorder(tree->rchild);
+}
+}
+void Preorder(NODE tree)
+{
+if(tree != NULL)
+{
+printf("%d ",tree->data);
+Preorder(tree->lchild);
+Preorder(tree->rchild);
+}
+}
+void Postorder(NODE tree)
+{
+  if(tree != NULL)
+{
+Postorder(tree->lchild);
+Postorder(tree->rchild);
+printf("%d ",tree->data);
+}
+}
+void SearchBST()
+{
+NODE temp1;
+int key;
+printf("Enter the key to be searched : ");
+scanf("%d", &key);
+temp1= tree;
+while(temp1 != NULL)
+{
+if(key == temp1->data)
+{
+printf("The key %d found in the BST", key);
+return;
+}
+else if(key < temp1->data)
+temp1 = temp1->lchild;
+else
+temp1 = temp1->rchild;
+}
+printf("Key %d not found in the BST", key);
+}
+int main()
+{
+int a[MAX], n, i, choice;
+while(1)
+{
+printf("\n\n**********************MENU*****************");
+printf("\n1. Create a BST of n integers\n2. Traverse the
+BST in Inorder\n3. Traverse the BST in Preorder\n4. Traverse the BST
+in Postorder\n5. Search the BST for a given element (KEY)\n6.
+Exit\n");
+printf("Enter your choice : ");
+scanf("%d",&choice);
+switch(choice)
+{
+case 1 : printf("Enter the number of integers : ");
+scanf("%d",&n);
+printf("Enter the elements\n");
+for(i=0; i<n; i++)
+scanf("%d",&a[i]);
+CreateBST(a, n);
+break;
+case 2 : printf("Inorder Traversal :\n");
+Inorder(tree);
+break;
+case 3 : printf("Preorder Traversal :\n");
+Preorder(tree);
+break;
+case 4 : printf("Postoder Traversal :\n");
+Postorder(tree);
+break;
+case 5 : SearchBST(tree);
+break;
+case 6 : exit(0);
+break;
+}
+}
+}
+
+
+
+                              </textarea>
+        </div>
+        <div class="details">
+          
+<button class="texts-btn"  id="copied9"
+onclick="myFunction10()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</button>
+            <h3>PROGRAM 10</h3>
+            <p></p>
+        </div>
+</div>  
+         <!--program 11   -->  
+         <div class="card card3">
+          <div class="container">
+              <textarea name="" id="myInput10" cols="90" rows="10">
+              
+                #include<stdio.h>
+                  #include<stdlib.h>
+                  #define MAX 10
+                  int source;
+                  void DFS(int a[MAX][MAX], int visited[MAX], int s, int n)
+                  {
+                  int u, v;
+                  u = s;
+                  visited[u] = 1;
+                  if(u != source)
+                  printf(" %d
+                  ", u);
+                  for(v=1; v<=n; v++)
+                  {
+                  if(a[u][v] == 1 && visited[v] == 0)
+                  DFS(a,visited, v, n);
+                  }
+                  }
+                  void BFS(int a[MAX][MAX], int visited[MAX], int source, int n)
+                  {
+                  int queue[MAX], f=0, r=0, u, v;
+                  queue[r] = source;
+                  visited[source] =1;
+                  while(f<=r)
+                  {
+                  u = queue[f++];
+                  for(v=1; v<=n; v++)
+                  {
+                  if(a[u][v] == 1 && visited [v] == 0)
+                  {
+                  printf("%d ", v);
+                  visited[v] = 1;
+                  queue[++r] = v;
+                }
+              }
+              }
+              }
+              int main()
+{
+int a[MAX][MAX], visited[MAX], n, choice, i, j, x, y;
+printf("Enter the number of vertices in the graph : ");
+scanf("%d", &n);
+printf("Enter the adjacency matrix for the graph\n");
+for(i=1; i<=n; i++)
+for(j=1; j<=n; j++)
+scanf("%d",&a[i][j]);
+printf("Enter the starting node of the graph : ");
+scanf("%d",&source);
+while(1)
+{
+printf("\n\n**********************MENU*****************");
+printf("\n1. DFS\n2. BFS\n3. Exit\n");
+printf("Enter your choice : ");
+scanf("%d", &choice);
+switch(choice)
+{
+case 1 : printf("Nodes reachable from %d using DFS
+method\n", source);
+for(x=1; x<=n; x++)
+visited[x] = 0;
+DFS(a, visited, source, n);
+break;
+case 2 : printf("Nodes reachable from %d using BFS
+method\n", source);
+for(y=1; y<=n; y++)
+visited[y] = 0;
+BFS(a, visited, source, n);
+break;
+case 3: exit(0);
+break;
+}
+}
+}
+
+                                </textarea>
+          </div>
+          <div class="details">
+            
+  <button class="texts-btn"  id="copied10"
+  onclick="myFunction11()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</button>
+              <h3>PROGRAM 11</h3>
+              <p></p>
+          </div>
+  </div> 
+           <!--program 12   -->  
+           <div class="card card3">
             <div class="container">
-                <textarea name="" id="myInput" cols="90" rows="10">
-                                  programs
+                <textarea name="" id="myInput11" cols="90" rows="10">
+          
+                  #include<stdio.h>
+                    #include<stdlib.h>
+                    #define MAX 100
+                    int main()
+                    {
+                    int n,m,ht[MAX],i, j, k, rec, address, homebucket, currentbucket,
+                    count = 0, choice;
+                    printf("Enter the number of employee records : ");
+                    scanf("%d", &n);
+                    for(i = 0; i < MAX; i++)
+                    ht[i] = -1;
+                    for(k = 0; k <n; k++)
+                    {
+                    printf("\nEnter the record %d\n", k+1);
+                    scanf("%d", &rec);
+                    address = rec % MAX;
+                    homebucket = address;
+currentbucket = homebucket;
+while(ht[currentbucket] != -1)
+{
+currentbucket = (currentbucket + 1) % MAX;
+if(currentbucket == homebucket)
+{
+printf("Hash Table Overflow");
+exit(0);
+}
+count++;
+}
+if(count != 0)
+printf("Collision occured %d times and solved using
+Linear Probing\n", count);
+count = 0;
+ht[currentbucket] = rec;
+printf("Record : %d\nHome Address : %d\nCurrent Adrress :
+%d\n",rec,homebucket,currentbucket);
+}
+printf("\nHASH TABLE DISPLAY\n");
+while(1)
+{
+printf("\n\n**********************MENU*****************");
+printf("\n1. Complete Hash table contents\n2. Hash Table
+showing only record entries\n3. Exit\n\n");
+printf("Enter your choice : ");
+scanf("%d", &choice);
+switch(choice)
+{
+case 1 : printf("Complete Hash Table Contents :\n");
+for(j = 0; j < MAX; j++)
+printf("%d
+%d\n",j,ht[j]);
+break;
+case 2 : printf("Hash Table showing Records : \n");
+for(j = 0; j < MAX; j++)
+if(ht[j] != -1)
+printf("%d %d\n",j,ht[j]);
+break;
+case 3 : exit(0);
+break;
+}
+}
+}
+
                                   </textarea>
             </div>
             <div class="details">
               
-<button class="texts-btn"  id="copied"
-onclick="myFunction1()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</button>
-                <h3>PROGRAM 3</h3>
+    <button class="texts-btn"  id="copied11"
+    onclick="myFunction12()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</button>
+                <h3>PROGRAM 12</h3>
                 <p></p>
             </div>
-  </div>        -->
+    </div> 
 
+
+
+
+<!-- upload -->
   <div class="upload"> 
               <a onclick="upload()"> 
              
@@ -621,8 +1739,9 @@ onclick="myFunction1()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</
   </div>
 
   <!-- Project -->
-  <script src="main.js"></script>
+  <script src="/java/cn.js"></script>
 </body>
+
    <!-- footer section start -->
     <footer>
       
