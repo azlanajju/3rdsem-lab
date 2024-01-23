@@ -1709,13 +1709,122 @@ break;
             <div class="details">
               
     <button class="texts-btn"  id="copied11"
-    onclick="myFunction12()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</button>
+    onclick="myFunction12()" ><i class="fa fa-copy"></i> Copy</button>
                 <h3>PROGRAM 12</h3>
                 <p></p>
             </div>
     </div> 
 
+               <!--program 13   -->  
+               <div class="card card3">
+                <div class="container">
+                    <textarea name="" id="myInput12" cols="90" rows="10">
+                      #include <stdio.h>
+                        #include <stdlib.h>
+                        #include <string.h>
+                        #define NUM_DAYS_IN_WEEK 7
+                        // Structure to represent a day
+                        typedef struct
+                        {
+                        char *acDayName; // Dynamically allocated string for the day name
+                        int iDate; // Date of the day
+                        char *acActivity; // Dynamically allocated string for the activity description
+                        }DAYTYPE;
+                        void fnFreeCal(DAYTYPE *);
+                        void fnDispCal(DAYTYPE *);
+                        void fnReadCal(DAYTYPE *);
+                        DAYTYPE *fnCreateCal();
+                        int main()
+                        {
+                        // Create the calendar
+                        DAYTYPE *weeklyCalendar = fnCreateCal();
+                        // Read data from the keyboard
+                        fnReadCal(weeklyCalendar);
+                        // Display the week's activity details
+                        fnDispCal(weeklyCalendar);
+                        // Free allocated memory
+                        fnFreeCal(weeklyCalendar);
+                        return 0;
+                        }
+                        
+                        
+                        
+                        
+                        DAYTYPE *fnCreateCal()
+                        {
+                        DAYTYPE *calendar = (DAYTYPE *)malloc(NUM_DAYS_IN_WEEK * sizeof(DAYTYPE));
+                        for(int i = 0; i < NUM_DAYS_IN_WEEK; i++)
+                        {
+                        calendar[i].acDayName = malloc(sizeof(char*)*50);
+                        calendar[i].iDate = 0;
+                        calendar[i].acActivity = malloc(sizeof(char*)*100);
+                        }
+                        return calendar;
+                        }
+                        void fnReadCal(DAYTYPE *calendar)
+                        {
+                        for(int i = 0; i < NUM_DAYS_IN_WEEK; i++) {
+                        printf("Enter details for day %d : ", i + 1);
+                        printf("Day Name: ");
+                        
+                        scanf("%s", calendar[i].acDayName);
+                        
+                        
+                        printf("Date(int): ");
+                        scanf("%d", &calendar[i].iDate);
+                        printf("Activity: ");
+                        
+                        scanf(" %s", calendar[i].acActivity);
+                        
+                        
+                        }
+                        }
+                        
+                        
+                        
+                        
+                        void fnDispCal(DAYTYPE *calendar)
+                        {
+                        printf("\nWeek's Activity Details:\n");
+                        for(int i = 0; i < NUM_DAYS_IN_WEEK; i++) {
+                        printf("Day %d:\n", i + 1);
+                        printf(" Day Name: %s\n", calendar[i].acDayName);
+                        printf(" Date: %d\n", calendar[i].iDate);
+                        printf(" Activity: %s\n", calendar[i].acActivity);
+                        }
+                        }
+                        void fnFreeCal(DAYTYPE *calendar)
+                        {
+                        for(int i = 0; i < NUM_DAYS_IN_WEEK; i++) {
+                        free(calendar[i].acDayName);
+                        free(calendar[i].acActivity);
+                        }
+                        free(calendar);
+                        }
+    
+                                      </textarea>
+                </div>
+                <div class="details">
+                  
+        <button class="texts-btn"  id="copied12"
+        onclick="myFunction13()" onmouseout="outFunc()"><i class="fa fa-copy"></i> Copy</button>
+                    <h3>PROGRAM 13</h3>
+                    <p></p>
+                </div>
+        </div> 
 
+
+
+        
+<script>
+   function myFunction13() {
+  document.getElementById("copied12").innerHTML = "Copied!";
+ 
+   var copyText = document.getElementById("myInput12");
+   copyText.select(); 
+   navigator.clipboard.writeText(copyText.value);
+ }
+</script>
 
 
 <!-- upload -->

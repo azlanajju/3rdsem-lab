@@ -98,3 +98,10 @@ function myFunction4() {
    copyText.select(); 
    navigator.clipboard.writeText(copyText.value);
  }
+ function myFunction13() {
+  document.getElementById("copied12").innerHTML = "Copied!";
+ 
+   var copyText = document.getElementById("myInput12");
+   copyText.select(); 
+   navigator.clipboard.writeText(copyText.value);
+ }
