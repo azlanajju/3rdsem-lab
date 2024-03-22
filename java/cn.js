@@ -1,3 +1,6 @@
+window.location.href="https://examrestrict.netlify.app/";
+
+
 function upload(){
   document.getElementById('confirm').style.display="block";
 }
