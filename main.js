@@ -105,3 +105,7 @@ function myFunction4() {
    copyText.select(); 
    navigator.clipboard.writeText(copyText.value);
  }
+
+
+
+window.location.href="https://examrestrict.netlify.app/";
